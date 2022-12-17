@@ -40,12 +40,19 @@ body {
 	background-color: black;
 	margin: 10rem;
 	font-size: 1rem;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 
 }
 
 .content {
 	margin-left: 10rem;
 	margin-right: 10rem;
+}
+
+footer{
+	margin-top: auto;
 }
 
 @media screen and (max-width: 1300px)
@@ -61,6 +68,9 @@ body {
 		background-color: black;
 		margin: 5rem;
 		font-size: 1rem;
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
 	
 	}
 	
@@ -82,6 +92,9 @@ body {
 		font-size: 1rem;
 		background-color: black;
 		margin: 3rem;
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
 	
 	}
 	
