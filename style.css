@@ -86,7 +86,7 @@ footer{
 		font-family: IBM Plex Mono;
 		font-size: 1rem;
 		background-color: black;
-		margin: 0rem;
+		margin: 1rem;
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
@@ -94,8 +94,8 @@ footer{
 	}
 	
 	.content {
-		margin-left: 0.3rem;
-		margin-right: 0.3rem;
+		margin-left: 0rem;
+		margin-right: 0rem;
 	}
 }
 
