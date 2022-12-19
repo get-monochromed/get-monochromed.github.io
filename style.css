@@ -50,6 +50,13 @@ footer{
 	margin-top: auto;
 }
 
+pre code {
+	background-color: white;
+	color: black;
+	display: block;
+	padding: 20px;
+}
+
 @media screen and (max-width: 1300px)
 {
 	h1 {
