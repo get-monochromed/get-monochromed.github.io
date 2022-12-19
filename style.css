@@ -30,6 +30,11 @@ h1 {
 	margin: 0.05rem;
 }
 
+h2 {
+	font-family: IBM Plex Mono Bold;
+	font-size: 3rem;
+	margin: 0.05rem;
+}
 body {
 	font-family: IBM Plex Mono;
 	background-color: black;
@@ -64,6 +69,12 @@ pre code {
 		font-size: 5rem;
 		margin: 0.05rem;
 	}
+
+	h2 {
+		font-family: IBM Plex Mono Bold;
+		font-size: 3rem;
+		margin: 0.05rem;
+	}
 	
 	body {
 		font-family: IBM Plex Mono;
@@ -89,6 +100,12 @@ pre code {
 		margin: 0.05rem;
 	}
 	
+	h2 {
+		font-family: IBM Plex Mono Bold;
+		font-size: 2rem;
+		margin: 0.05rem;
+	}
+
 	body {
 		font-family: IBM Plex Mono;
 		font-size: 1rem;
