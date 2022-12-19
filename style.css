@@ -9,11 +9,6 @@
 	src: url("fonts/IBMPlexMono-Bold.ttf") format("truetype");
 }
 
-@font-face{
-	font-family: "IBM Plex Mono Bold Italic";
-	src: url("fonts/IBMPlexMono-BoldItalic.ttf") format("truetype");
-}
-
 * {
 	font-family: IBM Plex Mono;
 	color: white;
@@ -91,7 +86,7 @@ footer{
 		font-family: IBM Plex Mono;
 		font-size: 1rem;
 		background-color: black;
-		margin: 3rem;
+		margin: 0rem;
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
@@ -99,8 +94,8 @@ footer{
 	}
 	
 	.content {
-		margin-left: 1rem;
-		margin-right: 1rem;
+		margin-left: 0.3rem;
+		margin-right: 0.3rem;
 	}
 }
 
