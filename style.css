@@ -60,7 +60,8 @@ pre code {
 	font-family: monospace;
 	color: black;
 	display: block;
-	padding: 20px;
+	padding: 10px;
+	font-size: 1.5rem;
 }
 
 @media screen and (max-width: 1300px)
