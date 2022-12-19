@@ -32,13 +32,13 @@
 	<h1> Tutorials </h1>
 	<br>
 	<div class="content"> 
-		<h3> Ranger with sixel support </h3>
+		<h2> Ranger with sixel support </h2>
 		<p> I personally use Sway as my window manager, which means I use wayland. But since wayland works in a different way compared to X11, so some X11 programs wont work on wayland. One of which was Ranger's image previews. In my X11 days, I just used Ueberzug, but it won't work on Wayland, but the terminal I was using did support sixel image previews. So I was on the hunt to find a fork of ranger that works with sixel.
 		</p>
 		<p>
 		There is a chance that ranger will get sixel support soon, but for the mean time you will have to compile from source.
 		</p>
-		<pre>
+		<code>
 			git clone https://github.com/remi6397/ranger
 
 			cd ranger
@@ -48,7 +48,7 @@
 			ranger --copy-config=all
 
 			change image previewer form w3m to sixel
-		</pre>
+		</code>
 	</div>
 </body>
 
