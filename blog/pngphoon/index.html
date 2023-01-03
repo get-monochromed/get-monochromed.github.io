@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title> Monochrome's Monochromatic Website</title>
+	<!-- Metadata thingies -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="canonical" href="https://monochrome.codeberg.page" />
+	<link rel="stylesheet" type="text/css" href="/style.css" />
+</head>
+
+<body>
+	<div class="navbar">
+			<a href="/index.html">
+				Home
+			</a>
+			<a class="nav-active" href="/blog/index.html">
+				Blog
+			</a>
+			<a href="/tutorials/index.html">
+				Tutorials
+			</a>
+			<a href="/systeminfo/index.html">
+				SystemInfo
+			</a>
+			<a href="/contact/index.html">
+				Contact
+			</a>
+	</div>
+
+	<h1> Blog </h1>
+	<br>
+	<div class="content"> 
+		<h2> PNGPHOON: Kinda cool Moonphase wallpaper generator </h2>
+		<p>
+		So, I was scrolling through reddit like usual, and found <a href="https://libreddit.kavin.rocks/r/unixporn/comments/zzqgjz/xmonad_bullshit_as_usual/">this post</a> on r/unixporn of this person on XMonad on Gentoo setup. No bar, just black and white terminal, and this really cool bitmap moon wallpaper. In the description it said something like "Wallpaper is made with Xphoon".
+		</p>
+		<p>
+		I was like <em> Nani sore? </em> (￣▽￣*)ゞ. So, I did a bit digging and found that there's this program called <a href="https://acme.com/software/phoon/">phoon</a> (PHase of mOON) which prints out the current phase of the moon in an ASCII art program, then someone made a cooler version of it called <a href="https://acme.com/software/xphoon/">Xphoon</a> (X PHase of mOON) which generates really high quality bitmap image of the phase of the moon and puts that as the background of the root X11 window. "X11 root window". Boy I've'nt heard that name in ages, For the uninitiated, X11, the display server can have a background image, but you can only see it if you use a minimal window manager like XMonad, DWM etc, so chances that you will be able to see that background is pretty small if you are on a DE and such, also if youre on Wayland (like me) X11 is out of the question anyway.
+		</p>
+		<p>
+		So I looked again for similar shit, and found <a href="https://svolli.de/software/pngphoon/">pngphoon</a> which is exactly like Xphoon but it only generates the image as png but wont set it as a wallpaper, which is great, now I can use it anywhere!!!. 
+		Its super easy to install as well, both pngphoon and Xphoon are available in debian's main repo. (idk about other distros, I only use Debian now.) So the only thing I had to do was <code> sudo apt install pngphoon </code> and create a wallpaper using <code>pngphoon -w 1366 -h 768 -f moon768p.png -s 100</code>. w,h & h flag are mandatory, use the exact resolution of your screen to get pixel perfect bitmap image, if you use a resolution thats not native then the wallpaper wont "pop" . -f is to give the file a nname and its mandatory, -s is star density, increase the number for more stars.
+		</p>
+		<p>
+		Since i set my wallpaper using my own script, I have added pngphoon to it as well, so i can just do setbg -x to set that wallpaper on demand.
+		</p>
+	</div>
+</body>
+
+</html>
