@@ -38,7 +38,10 @@ h2 {
 body {
 	font-family: IBM Plex Mono;
 	background-color: black;
-	margin: 10rem;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+	margin-left: 10rem;
+	margin-right: 10rem;
 	font-size: 1rem;
 	min-height: 100vh;
 	display: flex;
