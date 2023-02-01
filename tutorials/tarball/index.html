@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title> Monochrome's Monochromatic Website</title>
+	<!-- Metadata thingies -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="canonical" href="https://monochrome.codeberg.page" />
+	<link rel="stylesheet" type="text/css" href="/style.css" />
+</head>
+
+<body>
+	<div class="navbar">
+			<a href="/index.html">
+				Home
+			</a>
+			<a href="/blog/index.html">
+				Blog
+			</a>
+			<a class="nav-active" href="/tutorials/index.html">
+				Tutorials
+			</a>
+			<a href="/systeminfo/index.html">
+				SystemInfo
+			</a>
+			<a href="/contact/index.html">
+				Contact
+			</a>
+	</div>
+
+	<h1> Tutorials </h1>
+	<br>
+	<div class="content"> 
+		<h2> Tarballing without any fuzz </h2>
+		<p>
+			<h3>
+			Ok there's a quickie.
+			</h3>
+
+			<blockquote> > you get a tarball from github or some shit </blockquote>
+			<blockquote> > You: how extract? <insert confused oonga boonga here> </blockquote> 
+
+			Dont be that guy!
+
+			<h4>
+			This is the actual command
+			</h4>
+
+			<code>
+				# Extracting a tarball <br>
+				tar xzf file.tar <br>
+			 <br>
+				# Creating a tarball <br>
+				tar czf file.tar Folder <br>
+			</code>
+
+			<h4>
+			This is how you remember
+			(by becoming Ze German)
+			</h4>
+			This is how you remember <br>
+			(by becoming Ze German) <br>
+			
+			<code>
+				# Extracting a tarball <br>
+				# tar Xtract Ze File file.tar <br>
+				ie; <br>
+				tar xzf file.tar <br>
+			 <br>
+			 # Creating a tarball <br>
+			 # tar Create Ze File file.tar <br>
+			 tar czf file.tar Folder <br>
+			
+			</code>
+ 			<br>
+			If you want the verbose output as well, which you always want to have, the thing becomes
+			
+			<code>
+				# Extracting a tarball <br>
+				# tar Xtract Ze Vucking File file.tar <br>
+				ie; <br>
+				tar xzvf file.tar <br>
+			 <br>
+			 # Creating a tarball <br>
+			 # tar Create Ze Vucking File file.tar <br>
+			 tar czvf file.tar Folder <br>
+			<br>			
+			</code>
+			
+			Now open tarballs without doing `tar --help`
+		</p>
+	</div>
+</body>
+
+</html>
