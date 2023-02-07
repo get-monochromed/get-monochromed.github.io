@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Monochrome's Monochromatic Website</title>
+	<!-- Metadata thingies -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="canonical" href="https://monochrome.codeberg.page" />
+	<link rel="stylesheet" type="text/css" href="/style.css" />
+</head>
+<body>
+	<div class="navbar">
+			<a href="/index.html">
+				Home
+			</a>
+			<a class="nav-active" href="/blog/index.html">
+				Blog
+			</a>
+			<a href="/tutorials/index.html">
+				Tutorials
+			</a>
+			<a href="/systeminfo/index.html">
+				SystemInfo
+			</a>
+			<a href="/contact/index.html">
+				Contact
+			</a>
+	</div>
+
+	<h1> Blog </h1>
+	<br>
+	<div class="content"> 
+<h2
+id="friendship-with-debian-ended-arch-is-my-bestfriend-now">Friendship
+with Debian ended, Arch is my bestfriend now</h2>
+<h3 id="a-bit-of-backstory">A bit of backstory</h3>
+<p>My first linux distro I daily drove was Arch Linux, not Ubuntu like
+90% of the other users. (Surprise_MotherFucker.gif). And that too with
+DWM window manager (Luke Smith got me into it kekw) and it was fine,
+until it wasnt, shit broke randomly, bootup time was really slow, it
+took 30-40 seconds to load into the login manager and then another 30-40
+seconds for X11 to load (idk wtf was wrong with X11). So due to the
+instabilily, it searched far and wide for a distro that could satisfy
+me, I’ve tried Artix, Void, Gentoo, Fedora and Debian (in that order as
+well.)</p>
+<p>Debian is fine, its fun, its not bad, the package manager
+apt is fairly quick, not like dnf which “Do
+Not Finish” syncing the mirrors yet. On the stability part it gets an A+
+from my end, the issues with Debian was as follows</p>
+<ul>
+<li>Packages are too old, which I personally dont mind, but since
+packages are old, there’s a chance that Debian Stable might have the
+older version of a package that is missing some major upgrades thats
+available on the newer versions. Eg: MPV the media player can play
+youtube videos and such thanks to youtube-dl /
+yt-dlp. Youtubedl is more or less unusable due to it being
+throttled heavily by google, so you will have to use yt-dlp instead. On
+debian stable, the older version of mpv only supported youtube-dl not
+yt-dlp so it will install youtube-dl and try to open videos using
+youtube-dl, which is slow af. meanwhile on more modern distros, mpv
+supports yt-dlp instead of youtube-dl.</li>
+<li>The installer is quite weird, and uses older type of autosetup, ie;
+It will use the more traditional approach of ext4 file system, physical
+partition as swap, pulseaudio for audio etc, instead of btfs with zstd
+compression, zram swap, pipewire etc etc.</li>
+<li>Debian is split into Stable, Testing and Unstable. some packages are
+in stable, testing and unstable, but some are testing and unstable not
+on stable and some are on stable and unstable but not on testing. So you
+kinda have to be on unstable to be guaranteed that you will e get a
+package, and unstable is very much like Arch linux as well.</li>
+<li>When you cant find a package and is forced to compile it, now you
+have to find the name of the goddamn packages which will be different on
+different distros and sometimes you legit cant find some at all, its a
+bit of a pain.</li>
+</ul>
+<p>Then comes Arch, It solves all my packaging problems. With over 100k
+packages from the arch repos + AUR combined and how easy it is to write
+a pkgbuild, I was able to find almost all the obscure shit that I use
+and install it, either as a binary or compile with no need to figure out
+demendancies and such. Its almost like magic in a way.</p>
+<ul>
+<li>You want to install a fork of ranger that gives you sixel image
+previews? You got it <code>yay -S ranger-sixel-git</code></li>
+<li>You want to install a fork of rofi with wayland support? You got it
+<code>yay -S rofi-lbonn-wayland</code> or
+<code>yay -S rofi-lbonn-wayland-only-git</code></li>
+<li>You want to install an obscure program that lets you remap every
+single key on your keyboard and lets you assign all sort of weird things
+onto your keyboard? You got it <code>yay -S kmonad-bin</code></li>
+<li>I can go on and on and on…</li>
+</ul>
+<p>For that reason, I’m back on Arch linux even tho I really dont care
+about the distro or the bleeding edge packages.</p>
+	</div>
+</body>
+</html>
