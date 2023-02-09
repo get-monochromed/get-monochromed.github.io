@@ -63,6 +63,12 @@ footer{
 	margin-top: auto;
 }
 
+code {
+	font-family: monospace;
+	background-color: grey;
+	margin: 0;
+	hyphens: manual;
+   }
 .codeblock code{
 	background-color: white;
 	font-family: monospace;
