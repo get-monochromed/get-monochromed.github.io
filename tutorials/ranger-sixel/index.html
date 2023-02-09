@@ -38,14 +38,16 @@
 		<p>
 		There is a chance that ranger will get sixel support soon, but for the time being you will have to compile from source.
 		</p>
+		<div class="codeblock">
 		<code>
 			git clone https://github.com/3ap/ranger <br>
 			cd ranger <br>
 			sudo make install <br>
 			ranger --copy-config=all <br>
 			vim $HOME/.config/ranger/rc.conf <br>
-			set preview_images_method sixel <br>
+			set preview_images_method sixel <br> 
 		</code>
+		</div>
 
 		<p>
 		But... If you are using Arch Linux, then you only have to do
