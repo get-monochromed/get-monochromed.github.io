@@ -66,7 +66,8 @@ footer{
 code {
 	font-family: monospace;
 	font-size:1rem;
-	background-color: grey;
+	background-color: white;
+	color: black;
 	margin: 0;
 	hyphens: manual;
    }
