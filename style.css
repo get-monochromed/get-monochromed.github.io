@@ -113,6 +113,13 @@ code {
 		margin-left: 3rem;
 		margin-right: 3rem;
 	}
+	code {
+		font-family: monospace;
+		font-size:1rem;
+		background-color: grey;
+		margin: 0;
+		hyphens: manual;
+	   }
 	.codeblock code{
 		background-color: white;
 		font-family: monospace;
@@ -156,6 +163,13 @@ code {
 		margin-left: 1rem;
 		margin-right: 1rem;
 	}
+	code {
+		font-family: monospace;
+		font-size:1rem;
+		background-color: grey;
+		margin: 0;
+		hyphens: manual;
+	   }
 	.codeblock code{
 		background-color: white;
 		font-family: monospace;
