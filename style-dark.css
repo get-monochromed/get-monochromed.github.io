@@ -1,14 +1,12 @@
 
 @font-face{
 	font-family: "MonoFont";
-	/*src: url("fonts/IBMPlexMono-Regular.ttf") format("truetype");*/
-	src: url("fonts/DepartureMono-Regular.otf") format("opentype");
+	src: url("fonts/IBMPlexMono-Regular.ttf") format("truetype");
 }
 
 @font-face{
 	font-family: "MonoFont Bold";
-	/*src: url("fonts/IBMPlexMono-Bold.ttf") format("truetype");*/
-	src: url("fonts/DepartureMono-Regular.otf") format("opentype");
+	src: url("fonts/IBMPlexMono-Bold.ttf") format("truetype");
 }
 
 * {
