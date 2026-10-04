@@ -1,0 +1,24 @@
+baseURL = "https://get-monochromed.github.io/"
+locale = "en-us"
+title = "Monochrome's Website"
+disablePathToLower = true
+# Posts carry `tags` in frontmatter but there is no tag UI in this design, so
+# the taxonomy pages would be ~20 orphan pages reachable only by URL.
+disableKinds = ["taxonomy", "term"]
+
+[params]
+    description = "Random shit I find interesting will be here"
+    source = "https://github.com/get-monochromed/get-monochromed.github.io"
+
+[markup]
+    [markup.goldmark.renderer]
+        unsafe = true
+
+# No [markup.highlight] block on purpose. The old config asked for
+# style = "monochrome", which is not a real Chroma style — `hugo gen
+# chromastyles --style=monochrome` errors with "invalid style", so it was
+# silently doing nothing. It also set noClasses = false with no stylesheet
+# anywhere, which emitted highlight classes with no rules behind them.
+# Code blocks are rendered by layouts/_default/_markup/render-codeblock.html
+# as plain <pre><code> instead, which also avoids Chroma's stylesheet
+# defining its own `.bg` rule and colliding with the background element.

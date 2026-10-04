@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="crumbs"><a href="{{ if eq .Type "blog" }}/blog/{{ else }}/tutorials/{{ end }}">← {{ .Type }}</a></div>
+<article class="article">
+  <div class="eyebrow">{{ .Type }} · {{ .Date.Format "2/1/2006" }}</div>
+  <h1>{{ .Title }}</h1>
+  {{ with .Summary }}<p class="lede">{{ . | plainify }}</p>{{ end }}
+  <div class="prose">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

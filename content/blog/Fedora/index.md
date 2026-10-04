@@ -1,0 +1,34 @@
+---
+title: "Fedora is better than ever (ish)"
+date: 2025-12-12
+draft: false
+tags: [linux, fedora, distro]
+summary: "dnf is the best package manager I have ever used, and also the thing that made me quit Fedora the first time."
+---
+There are a billion linux distros out there. Many I haven't bothered to try out since its just an already existing OS with a customised DE and nothing else. Like how there is a ton of Ubuntu and Arch based distros. Most aren't really worth while to look at. (maybe except Linux Mint, which I tried once and was fairly good). The distros ive used so far, are Arch, Gentoo, Mint, Fedora, Void, Debian etc.
+
+You already know how I feel about Debian. I havent been able to install and setup a proper WM on Gentoo yet, Void is somewhat broken everytime I try it, Mint is good, no real complaints, and then there's Fedora
+
+## First impression of Fedora
+
+I first used Fedora on my 2019 MacBook Pro. I was so fucking tired of using MacOS, that I tried installing linux on the machine. Back in 2017, Apple introduced a dog shit piece of hardware called T2 Security Chip, which ofcourse only works on MacOS, and for some reason, unlike your typical TPM chip, has control over your SSD, speakers, microphone, camera and many other things. On top of all of that, without the T2 chip, the system will not even boot. Think about the Intel Management Engine but worse. So to get Linux to work, people had to create their own driver for the T2 chip.
+
+There is a project called T2linux.org and they had a build of Ubuntu, Fedora and Arch at that time. I dont want to use Ubuntu, and Arch was my daily driver at that point in time on my other computer and I know how annoying it is to get it to work at times. So I picked Fedora. I also heard a lot about Fedora from a friend of mine who WILL NOT SHUT UP about the distro and how its the best thing since sliced bread.
+
+I didnt use that installation too long since basic things like suspend, automatic switching of audio from speakers to headphones etc wont work, and what worked was mostly flaky at best. But the distribution was fine. It installs a ton of programs and drivers you need to have without having to manually install them, like printing support, ssd trim support, copy on write filesystem, zram as swap, power profiles, thermald for thermal management etc etc. One of those complete but not super bloated distro that I have used.
+
+## The best and worst thing about Fedora is "dnf"
+
+I've only used a few package managers, apt on debian, which is easy to use, but a bit slow and all data is just dumped onto the screen and hard to understand what exactly is happening. Pacman on Arch, which is insanely fast, but awful syntax, and data is somewhat organised. Then there is dnf, oh boy, Its as easy as apt when it comes to usage, very intuitive syntax, it automatically puts data into tables when you do updates, when you search for packages, it will automatically sort the entries with exact match, match in title, match in summary etc. Overall the best package manager I have ever used. Everything is well organised. BUT!!!!!, every good thing has to come to an end. The worst thing about the package manager is how slow the repos are. Doing the basic repo syncing, downloading packages will be in 10-100 Kbps speeds and will take literal minutes to run a basic command like `dnf info waybar`
+
+Fedora unlike Arch and Ubuntu do not use a repo list as a file, but it uses some sort of metalink which then, in their servers, will get mapped to a random repo that is near you, and will load balance everything etc. Wow that sounds amazing, isnt it better this way? No! the fucking repos that they give you are going to be all super slow and crappy ones, so I never get good speeds. Hell, I havent even gotten speeds faster than 100kbps. On arch, you can use 3rd party tools to get only repos which might be further away from you but have good speeds. I am yet to figure that out on Fedora.
+
+For these reasons, I ditched Fedora and went back to Arch like usual.
+
+## You said it got better? but all I hear is cons
+
+Its been a few years since this incident happened. Now, on my ThinkPad, I got back to Fedora because I wanted to install a "just works" distro that wont break randomly cus I want to be able to do office work without it breaking. Fedora 43 with Gnome 49 is really good now. They replaced the slow dnf4 which was written in python to dnf5 which is written in C++, which means installing packages a lot more faster. repo syncing and other network related issues still persist but much less than before. Power profiles daemon got replaced with tuned-ppd. Tuned also does some sort of tuning on top of power profiles so its better. I installed powertop on top of it and if everything is running like expected then I can get the system to run pretty well but also drain only 3-5W of power. Gnome software also feels more reliable than before, the whole experience is much more stable now. I guess its the best time rn to try the distro. If you find it stable enough to do work on, then its a good pick. You still have to do some post installation like installing the media codecs and mesa-freeworld driver etc for the system to work fine. But after that, there is nothing else you gotta do. You can do almost everything graphically without having to use the terminal. Flatpaks work amazing now, I installed most of the applications as flatpaks, havent had any issues with that either. All in all, its less work.
+
+## When it breaks, it goes all in
+
+Randomly, every once in a while, all bugs and issues seem to come all together, like the day im writing this blog, my internet crapped out, my wifi randomly goes into power saver mode and wont go past 3mbps, gnome software stopped working completely, using super + right arrow key to tile to right seems to move the window into fullscreen etc etc. a few reboot fixed most of the issues. The distro is not perfect, but it feels pretty good.

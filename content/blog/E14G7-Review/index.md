@@ -1,0 +1,65 @@
+---
+title: "New ThinkPad Day!"
+date: 2025-11-29
+draft: false
+tags: [thinkpad, review, hardware, fedora]
+summary: "Review : ThinkPad E14 Gen 7 AMD | I bought the cheapest ThinkPad Lenovo makes, maxed the spec, to finally replace the good ol' reliable X220."
+---
+
+## Rant lol
+
+There are times when you simply have to give up. Yes, you can run ultra minimal linux system on your old aging machine and get it to be usable today, but if you want to things that are more on the heavier side of things, you simply cant, without causing the system to overheat or slow down etc etc. My X220 ThinkPad has seen a lot of use, I bought it used from some shop that was selling old ThinkPads, it was semi broken physically and also had missing components. I was able to replace some basic parts, get new battery, RAM, Storage etc, thermal pads and paste etc, but the more you replace, the more things broke. Currently its 2nd or 3rd battery died, the keyboard ribbon cable broke and one of its 2x4 gig ram sticks killed itself as well. For some reason the machine was overheating and hitting 90c constantly when doing basic things like watching videos with VAAPI enabled. It can be frustrating.
+
+Then, I moved to a desktop, which was great, Intel Core i5 12400 CPU, 16 gigs of RAM, 512 gig NVMe SSD, I popped in my old GTX 1050Ti and played some games on it as well (I Still use this desktop today). But funny enough, I got a job, and I wanted to have a decently powerful system to do work stuff on while I was at the office, cus the desktop they provide only has 8 gigs of RAM and the system runs Windows 11 which takes up close to 6-7 gigs to idle, so its unbearably slow when you are actually working. I simply cant carry my desktop to work everyday, now can I? lol. So I thought of finally getting a laptop and calling it a day.
+
+## What should I buy?
+
+I dont want to do what I did back in 2018 by buying an overpriced machine that is underpowered and non upgradable. Lord knowns what you would have to run on your computer within 6 months to a year after you purchase something, people's requirements change soo drastically, so buying something that only has soldered components or is very expensive or has low to mid tier components was a no go.
+
+higher end components is top priority, BUT!! my previous machine was a ThinkPad X220, that shit is hard to beat ngl. Super ergonomic, great keyboard, fuck ton of ports, has a good size, has a trackpoint, removable battery, upgradable RAM and storage etc etc. If I had to buy a new machine, it had to be a new ThinkPad that can even come close to this absolute unit of a machine.
+
+Ok, so ThinkPads only, now what? New ones are pretty expensive, I wanted to keep it under 100K INR (1200 USD) since my job doesnt pay me enough for me to afford expensive ones. P series, X series and T series are generally really expensive and X series only have soldered RAM, and T series only have 1 RAM slot and the other is soldered. L series which is considered as T series but more budget friendly, is made of absolute trash and I have personally heard from tons of people who used L series given to them from work to be defective within months. The only other cheaper model in the ThinkPad roaster is the E series, which is the cheapset ThinkPad that they make, but for some reason is built better and has better components than L series while costing less than L series. How? I have no idea.
+
+E series it is then, I went and checked the models that they have, E14 Gen 7 is the latest model with both Intel and AMD offerings. Intel models having Core Ultra 7 255U/H as their highest end model and AMD one having Ryzen 7 250 as their top model. 255H model with everything else I wanted will be more than 100K and also will have less performance cores. Only 2 PCores if U series and I think 4 or 6 PCores if H series. Meanwhile the Ryzen one has only 8 performance cores and is cheaper overall and on top of that you get Radeon 780M iGPU, so you can play games if you want, as its more capable than Steam Deck and ROG Ally iGPU.
+
+With that in mind, I specced out the rest of the hardware, Lenovo lets you spec out a custom build with your required CPU, RAM, Storage, Display etc, and they will put all those things together and ship you one from China
+
+- So I got **Ryzen 7**: So that it will still be decent 5 years down the line
+- **32 GB RAM**: My current work stuff are all web based and each tab is around 300-500 megs and thus on my desktop with 16 gigs, im using close to 10 gigs some times. So I wanted a bit more memory as a buffer to run other things like VMs or something else
+- **1 TB Storage**: I need atleast 512 gigs if I want to run VMs, have maybe a game or so downloaded and some movies or other media on the machine, and 1TB drive upgrade was not really expensive and 2242 drives generally cost more than 2280 and is rarer, so if I have to get 2242 drives down the line, it might be a hassle. Might as well max out the storage lol
+- **100% sRGB** screen: They sell 3 displays for the AMD model, all 1920x1200@60Hz (16:10, thank god its not 16:9 ewww) and 2 of them being 45% NTSC touch and normal models, **WHY THE FUCK ARE THEY SELLING 45% NTSC SCREENS IN 2026?**: and lastly the 100% sRGB normal non touch screen model. If you buy the Intel model, you get a 2880x1800p 120Hz screen IIRC, but thats not provided on the AMD model, and from my previous experience using 2560x1600p 13 inch screen on my macbook on Linux, the text is too small on 100% scaling and too big for 200%, so you need fractional scaling, I was using 133.33% to emulate 1920x1200, and if you move to a TTY, its worse. So having that high res is more pain than its worth it. Sure that 120 Hz screen is nice, but considering the extra power draw and already power hungry CPU with no ECores, yeah no bueno.
+- **Fingerprint sensor and backlight keyboard** : I dont know why lenovo doesnt just add the fingerprint sensor and **"BACKLIGHT"** keyboard as standard!!! this isnt 2015 bruv!!, seriously, not having backlight now is insane.
+- **Wifi 6**: They sell Wi-Fi 6 and 6E chips, but I didnt want to gamble on newer chips and not having working drivers, like I have on my Desktop with its 6E MediaTek 7902 Chipset, which has no drivers for linux. The Wi-Fi 6 MediaTek 7920 and the RealTek RTL8852BE that are default, are well supported and seems to be the most stable option. 
+- **48W battery**: It was the only option available when I purchased the machine, but weeks after buying mine, they now also sell the 64W battery as well, I got baited on that one.
+
+I basically bought the max spec that they sell for almost everything, So you might think "If you are going to get the maxed out model, they do you really need to bother if its soldered in components?". That is logical to assume, but the E14 actually supports 2 TB storage, and 64 gigs of memory as its maximum supported spec, on top of that, if the stock RAM, Wi-Fi or storage chips randomly die, I wont have to buy a new machine. I am going to keep this machine for atleast 8-10 years lol, the more replacable components the better.
+
+## Does it hold up to the ThinkPad legacy?
+
+From my perspective, a ThinkPad is a **"ThinkPad"** if it
+
+- is easily upgradable
+- is built well
+- has a good keyboard
+- has a trackpoint
+- has good port selection
+- has a 180 degree hinge
+- has status LEDs for things like sleep, power etc
+
+Which mostly is satisfied by the new machine.
+
+- its upgradable but does need you to open the whole back panel instead of only removing the small doors
+- its built well I think, everything feels sturdy, idk if this can withstand falls and what not like the old ones tho
+- keyboards have gotten worse and worse as years go by, on all types of laptops, and The new latest ThinkPad keyboards dont have the same amount of travel as the old ones, but still is relatively good, not dog shit, so its still good enough. The keycaps have a different texture than the old ones, its a bit more grippy than before. I cant tell if the caps will get glossy after use or not, which was common on the old ones.
+- Trackpoints arent really getting that much development time, all development is completely focused on trackpads, Lenovo even removed the trackpoints on the new ThinkPad X9 Model even, and even have a new category called ThinkBooks which also dont have any trackpoints. But putting that aside, I think this trackpoint is the one released after the version that is used in X220 and the tracking on it is much nicer than the one on X220. I have used the trackpoint of a 2018 ThinkPad X1 Yoga, and the sensor looks and feels the same as the one I have. I think this sensor is close to 8-10 years or so old
+- All laptops have less ports now, so same trend on ThinkPads, but atleast it has 2 USB A, 2 USB C, 1 HDMI, 1 Ethernet and a headphone jack, which is fine I guess. having maybe one or more USB A would be nice. But a man can only dream. Both USB C ports can be used as external monitor outputs, so that is a bonus. the AMD iGPU supports a max of 4 displays and you can max that out by connecting 3 external monitors and the internal one
+- The hinge feels a bit cheap compared to the old one, and is not fully 180 degrees, its slightly under 180, but I never use the system with the screen completely flat anyways, so its fine.
+- There is status LEDs for charge near the USB C port, there is a suspend LED on the ThinkPad i on the lid, and the power button does shows the same when its open. Power button also shows green if the fingerprint sensor is being used. And as usual, theres is status LEDs for CapsLock, FnLock, Mute and MicMute like on old ThinkPads. So no worries there.
+
+## My experience, nitpicks and annoyances
+
+From my few days of usage, the performance is solid, the machine runs cool. the trackpad and trackpoint are nice to use, Wi-Fi, Bluetooth, fingerprint etc all work out of the box without any issues. All I did was install the latest version of Fedora 43 Workstation and do a system update, thats about it. Its nice to have a machine that works out of the box without issues. I used to have an Arch Linux SwayWM based setup with a ton of terminal based software alongside it, but idk how that will work on the ThinkPad and I didnt feel like spending time tinkering and having to fix issues when things break. I do office work on thie machine daily, so I dont have time to fix things.
+
+The only nitpicks that I can find is that the Ctrl and Fn key is now like normal laptops. ie; Its in the order Ctrl Fn Win Alt, unlike the traditional way of Fn Ctrl Win Alt. I find the old ThinkPad layout to be more easier to use, since the Ctrl key is closer to my pinky finger than being at the very left end. There was an option in BIOS to revert back the keys to its traditional position but I would like to swap the keycaps as well but while trying to pry off a keycap, the whole mechanism came off and I had to spend 30 minutes to somehow put it back in place. Another minor nitpick would be that, the trackpoint mouse buttons are flat and have no distinct shape like the old ones, so its a bit hard to figure out where you are touching sometimes
+
+The only real annoyance is battery life. I get around 4 hours of life if I am doing office work, which is just running some heavy web apps on the browser. I do get 6-8 or so hours of casual use of browsers and some movie watching etc, and I already have a power port on my table at work to plug my machine in, so not a deal breaker, but its 2026 already and I was assuming 8 hours of battery life is common place and light usage is 10-12 hours etc. but seems like that ship never sailed.

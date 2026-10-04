@@ -1,0 +1,38 @@
+{{ define "main" }}
+<section class="intro">
+  <div class="eyebrow">{{ .Params.eyebrow | default site.Title }}</div>
+  <h1 class="site-title">{{ .Params.headline | default .Title | safeHTML }}</h1>
+  {{ with (.Params.lede | default site.Params.description) }}<p class="lede">{{ . }}</p>{{ end }}
+  <div class="stats">{{ len (where .Site.RegularPages "Type" "blog") }} posts · {{ len (where .Site.RegularPages "Type" "tutorials") }} tutorials</div>
+</section>
+
+<section class="section">
+  <div class="section-head"><h2>Latest</h2><a href="/blog/">all posts →</a></div>
+  <ul class="rows">
+    {{ range first 8 (where .Site.RegularPages "Type" "in" (slice "blog" "tutorials")).ByDate.Reverse }}
+    <li>
+      <a href="{{ .RelPermalink }}">
+        <span class="row-kicker">{{ .Type }}</span>
+        <span class="row-title">{{ .Title }}</span>
+        <span class="row-date">{{ .Date.Format "2/1/2006" }}</span>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</section>
+
+<section class="section">
+  <div class="section-head"><h2>Tutorials</h2><a href="/tutorials/">all →</a></div>
+  <ul class="rows">
+    {{ range (where .Site.RegularPages "Type" "tutorials").ByDate.Reverse }}
+    <li>
+      <a href="{{ .RelPermalink }}">
+        <span class="row-kicker">howto</span>
+        <span class="row-title">{{ .Title }}</span>
+        <span class="row-date">{{ .Date.Format "2/1/2006" }}</span>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}

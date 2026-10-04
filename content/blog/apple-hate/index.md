@@ -1,0 +1,78 @@
+---
+title: "Apple Hate"
+date: 2025-12-15
+draft: false
+tags: [apple, rant, hardware]
+summary: "Why I will never buy another Apple product, from glued-in batteries to an OS that bricks itself."
+---
+The following is basically a message I sent to a Discord friend who uses a Mac. She was confused as to why I have such strong opinions on it.
+
+You might be wondering why I cant stand MacBooks and why I would never buy one. Truth be told, I wont buy a single Apple product if possible.
+
+Way before I was a Linux user, I used to be a Apple fanboy, I thought they made the best products, So I ended up buying an iPhone 6s when iPhone 7 or 8 was released. I liked it back then, So I even bought a MacBook Pro.
+
+I was really liking my machine. **Until I grew brain cells**
+
+I will **try** to keep this short as possible cus ofcourse, you got better things to do than read this.
+
+I will break this down into 2 main categories, Software and Hardware.
+
+## Hardware
+
+Sure, Apple products have high end components, but you are paying a lot of money for it to begin with, you better get good components. But the issue is that Apple do not care about the hardware they make, how long they will last or if its even fixable. All they care about it to make something, sell it, and make money.
+
+Apple likes to "innovate" by doing things that are not logical, things that no one asked for. They sold computers with good keyboards, screen and tons of ports but then one day they woke up and said "Let there be USB-C" and took every port out of the machine, and gave you 4-6 USB-C ports and called it a day, and all the customers had to pay 100s of dollars to buy dongles to make their new "ultra premium" product somewhat usable. OR! buy new accessories and devices all with USB-C to make it usable on your computer. The love to make people "buy a solution".
+
+If I pay a large sum for a computer, I expect it to work out of the box, and not need to completely change everything else I have just to be compatible with the computer.
+
+My 2019 MacBook Pro's screen randomly died, I babied the hardware the whole time, but randomly one day my screen started glitching. got it fixed from an Apple store cus I had Apple Care +. Why would a brand new multi thousand dollar machine just randomly have screen issues!? The engineers at Apple thought the thickness of the laptop, which is an arbitrary value they came up with, is more important than having good quality ribbon cables and bigger bends, so the ribbon was thin, fragile and was doing a harsh bend, causing it to fail prematurely.
+
+Ok, got the screen replaced, but the screen is glued to the top lid, you cant replace just the screen, you have to replace the whole lid assembly? WHY? no idea. Just make the customer spend more money cus of your bad design decisions. In some models, the battery is glued to the rear metal panel, so you had to replace that too if you replace a battery.
+
+The keyboard is riveted into the chassis, so fixing your keyboard means you buy a whole new chassis altogether, given that its one block of aluminium, its going to be expensive. If a person only needs to replace a keyboard, he should only need to replace the keyboard.
+
+If you have a simple fix, the shop will tell you to replace a dozen things instead and charge through the roof, or try to up-sell you into buying a new model and ditching the old one.
+
+Dont get me started on the old butterfly keyboard. ugh. its more nicer to type on glass than that. Even a 0.01mm spec of plastic or stone or dust is enough for they keyboard to jam up an not be usable, and you have to physically pry out the keycap and then take the dust out to get the key working. I have like 5 or 7 keycaps which are broken cus I had to take em out to get it working, and when you remove em, they break off.
+
+Ah btw, my MacBook died after like 4 years of ownership cus I put the laptop to sleep with low battery and didnt charge it for 3-4 days. WOW!
+
+Meanwhile I bought a ThinkPad X220, used, from a used parts seller, and that too the one I got was inside a waste bin which they were about to throw away cus it only contained old and partially destroyed X220 and X201 machines. Mine was also pretty ruined with bits chipped off but it was working, and that laptop is still working fine, I think its on its 3rd battery, and the RAM I had on it killed itself, and I plugged in the keyboard ribbon cable too hard and it ripped at the connector. Yet the machine still turns on and works like nothing ever bothered it.
+
+Oh I didnt even mention that everything is soldered in, so you cant upgrade anything. If you realise that your new workflow required more RAM and before, or if your storage is not enough anymore, you are toast, buy a new machine instead. No one should be buying a new laptop every year or 2, but your hardware requirements could change within 6 months to a year. You buy a machine with a specific work in mind, but you then realise you need to do something else as well.
+
+## Software
+
+I dont like MacOS, its awful, the OS is built to only work on HiDPI screens, it doesnt have any window management, its shittier than Gnome, which isnt the best DE out there. (KDE is a better DE overall, but I prefer Gnome cus I am a control freak, so the less control I have on my DE, the more sane I am now)
+
+I love it when you have to buy more expensive hardware just because my computer will not work properly if I use anything else.
+
+Like, you are forced to buy a 4K screen just so that you can get 1080p levels of scaling. I was confused onto why MacOS looked weird on my 1080p monitor, but I realized that if you aren't using a HiDPI screen, the font will be be bold at all times cus that's how you get the font to look normal sized on the HiDPI screens.
+
+You couldnt even set a specific scaling % either, On my 13 inch screen the default scaling which was 200% of 1280x800p was too big, the only option was the to switch to next option which I would basically run the UI at 200% of 1680*1050 which then gets downscaled back to 2560x1600p on the screen. Like, if you take a screenshot, it will be 2x of 1680x1050.
+
+On top of that, while I was on MacOS, my friends were on Linux and I slowly started liking how Linux works rather than MacOS, having a good window manager, being able to install packages from a centralized secure source than going to a random web site, how fast it worked on even aging hardware, the heap of tools and software for any niche user's needs.
+
+Have you had the displeasure of reinstalling MacOS? Unlike Windows and Linux where you get an ISO file which you can boot from to reinstall the OS, MacOS dont have anything like that. To have a USB MacOS boot CD, you will have to use another mac to download the update from the Mac AppStore and then use dd to move that to a usb drive.
+
+I had an issue where my MacOS was using way too much storage without anything installed, So wanted to reinstall it, but if you delete the MacOS partition, you are cooked. The system turns into a brick. There is a network recovery thing which is supposed to download a copy of MacOS from the internet and install that, but that never worked for me. I had to somehow find a Hackintosh Mojave ISO and use that to install Mojave on the machine and then download the normal version of MacOS from AppStore, dd that to a USB and reinstall again to get my machine back to being usable.
+
+Overall, very frustrating experience. You have no control over the hardware, software or ecosystem at all. Apple can say "this is the new thing now" and show up with a new standard or workflow that completely breaks your existing workflow and you have to spend more money to fix the problem that they created.
+
+I am more happy with ThinkPads, which are built well, has great hardware, looks good, has status LEDs, runs Linux with zero issues, have upgradable RAM and storage, can be fixed without getting ripped off.
+
+Mac Mini is the only apple hardware that I found interesting back when it was Intel, cus I could buy a Mini, then upgrade the RAM myself and connect external drives for more storage etc. It had actual ports as well.
+
+Now that everything is ARM, Mini is also annoying, you cant get them with decent amount of storage or RAM without paying through the roof.
+
+Not like I want to use that OS in the first place.
+
+The only good things I liked that Apple machines have are
+
+- Good trackpad (I still like Trackpoint more)
+- Good speakers
+- Final Cut Pro X
+- The keyboard layout to a small degree
+- Color Accurate display
+
+But modern ThinkPads do have good trackpads (only X1 Carbon has the mac like trackpad tho, mine is still physical clicks. Tracking on the other hand is equally good. Speakers are still a bit of a downgrade compared to Macs. Keyboard layout of Macs, you can completely emulate on Linux using kmonad if you need to. And finally we do get 100% sRGB screens on ThinkPads now, and higher end ones do have DCI-P3 support as well. So watching movies look great already. I am fine with some of these caviats tbh.

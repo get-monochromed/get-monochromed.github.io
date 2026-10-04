@@ -1,0 +1,4 @@
+{{- /* Plain <pre><code>. No chroma: this design has no syntax palette, and
+       emitting highlight classes with no stylesheet behind them would only
+       add dead markup. */ -}}
+<pre tabindex="0"><code{{ with .Type }} class="language-{{ . }}"{{ end }}>{{ .Inner }}</code></pre>

@@ -1,0 +1,17 @@
+{{- /* Images are resolved from assets/images/ by filename. Keeping them there
+       (rather than beside the post) means the multi-megabyte originals are
+       never published — only the generated webp files ship. */ -}}
+{{- $name := path.Base .Destination -}}
+{{- $img := resources.Get (printf "images/%s" $name) -}}
+{{- if $img -}}
+{{- $lg := $img.Resize "1400x webp q82" -}}
+{{- $sm := $img.Resize "760x webp q78" -}}
+<img src="{{ $lg.RelPermalink }}"
+     srcset="{{ $sm.RelPermalink }} 760w, {{ $lg.RelPermalink }} 1400w"
+     sizes="(max-width: 900px) 100vw, 860px"
+     width="{{ $lg.Width }}" height="{{ $lg.Height }}"
+     loading="lazy" decoding="async" alt="{{ .Text }}">
+{{- else -}}
+{{- warnf "render-image: no file at assets/images/%s (referenced from %s) — the <img> below will 404" $name .Page.File.Path -}}
+<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy">
+{{- end -}}

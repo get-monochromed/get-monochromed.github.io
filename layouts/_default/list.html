@@ -1,0 +1,22 @@
+{{ define "main" }}
+<header class="page-head">
+  <h1>{{ .Title }}</h1>
+</header>
+{{ with .Content }}
+<div class="prose section-body">{{ . }}</div>
+{{ end }}
+<ul class="rows list-rows">
+  {{ range .Pages.ByDate.Reverse }}
+  <li>
+    <a href="{{ .RelPermalink }}">
+      <span class="row-date">{{ .Date.Format "2/1/2006" }}</span>
+      <span class="row-main">
+        <span class="row-title">{{ .Title }}</span>
+        {{ with .Summary }}<span class="row-desc">{{ . | plainify | truncate 150 }}</span>{{ end }}
+      </span>
+      <span class="row-arrow">→</span>
+    </a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

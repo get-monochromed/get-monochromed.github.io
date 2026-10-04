@@ -1,0 +1,10 @@
+{{ $p := .RelPermalink }}
+<nav class="dock-wrap" id="dockWrap">
+  <div class="dock" id="dock" role="navigation" aria-label="Primary">
+    <span class="slider" id="dockSlider" aria-hidden="true"></span>
+    <a href="/" data-dock class="home-link {{ if .IsHome }}active{{ end }}"{{ if .IsHome }} aria-current="page"{{ end }}>Home</a>
+    <a href="/blog/" data-dock class="{{ if hasPrefix $p "/blog/" }}active{{ end }}"{{ if hasPrefix $p "/blog/" }} aria-current="page"{{ end }}>Blog</a>
+    <a href="/tutorials/" data-dock class="{{ if hasPrefix $p "/tutorials/" }}active{{ end }}"{{ if hasPrefix $p "/tutorials/" }} aria-current="page"{{ end }}>Tutorials</a>
+    <a href="/systeminfo/" data-dock class="{{ if hasPrefix $p "/systeminfo/" }}active{{ end }}"{{ if hasPrefix $p "/systeminfo/" }} aria-current="page"{{ end }}>SystemInfo</a>
+  </div>
+</nav>

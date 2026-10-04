@@ -1,0 +1,29 @@
+---
+title: "Friendship ended with Debian, Arch is my bestfriend now"
+date: 2023-02-08
+draft: false
+tags: [linux, debian, arch]
+summary: "Debian's stable-but-stale packages and split repos sent me back to Arch, and the AUR is why I stayed."
+---
+## A bit of backstory
+
+My first linux distro I daily drove was Arch Linux, not Ubuntu like 90% of the other users. (Surprise_MotherFucker.gif). And that too with DWM window manager (Luke Smith got me into it kekw) and it was fine, until it wasnt, shit broke randomly, bootup time was really slow, it took 30-40 seconds to load into the login manager and then another 30-40 seconds for X11 to load (idk wtf was wrong with X11). So due to the instabilily, I searched far and wide for a distro that could satisfy me, I’ve tried Artix, Void, Gentoo, Fedora and Debian (in that order as well.)
+
+## Whats wrong with Debian
+
+Debian is fine, its fun, its not bad, the package manager apt is fairly quick, not like dnf which “Do Not Finish” syncing the mirrors yet. On the stability part it gets an A+ from my end, the issues with Debian was as follows
+
+- Packages are too old, which I personally dont mind, but since packages are old, there’s a chance that Debian Stable might have the older version of a package that is missing some major upgrades thats available on the newer versions. Eg: MPV the media player can play youtube videos and such thanks to youtube-dl / yt-dlp. Youtubedl is more or less unusable due to it being throttled heavily by google, so you will have to use yt-dlp instead. On debian stable, the older version of mpv only supported youtube-dl not yt-dlp so it will install youtube-dl and try to open videos using youtube-dl, which is slow af. meanwhile on more modern distros, mpv supports yt-dlp instead of youtube-dl.
+- The installer is quite weird, and uses an older type of autosetup, ie; It will use the more traditional approach of ext4 file system, physical partition as swap, pulseaudio for audio etc, instead of btfs with zstd compression, zram swap, pipewire etc etc.
+- Debian is split into Stable, Testing and Unstable. some packages are in stable, testing and unstable, but some are testing and unstable not on stable and some are on stable and unstable but not on testing. So you kinda have to be on unstable to be guaranteed that you will get a package, and unstable is very much like Arch linux as well.
+- When you cant find a package and is forced to compile it, now you have to find the name of all the goddamn dependancy packages (run time and build dependancies) which will be different on different distros and sometimes you legit cant find some at all, its a bit of a pain.
+
+## Arch comes in like a lion
+
+(Yes, reference to the anime "March comes in like a lion") Arch solves all my packaging problems. With over 100k packages from the arch repos + AUR combined and how easy it is to write a pkgbuild, I was able to find almost all the obscure shit that I use and install it, either as a binary or compile with no need to figure out dependancies and such. Its almost like magic in a way.
+
+- You want to install a fork of ranger that gives you sixel image previews? You got it `yay -S ranger-sixel-git` You want to install a fork of rofi with wayland support? You got it `yay -S rofi-lbonn-wayland` or `yay -S rofi-lbonn-wayland-only-git`
+- You want to install an obscure program that lets you remap every single key on your keyboard and lets you assign all sort of weird things onto your keyboard? You got it : `yay -S kmonad-bin`
+- I can go on and on and on…
+
+For that reason, I’m back on Arch linux even tho I really dont care about the distro or the bleeding edge packages.
