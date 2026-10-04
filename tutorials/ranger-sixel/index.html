@@ -1,59 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<title> Monochrome's Website</title>
-	<!-- Metadata thingies -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="canonical" href="https://get-monochromed.github.io" />
-	<link rel="stylesheet" type="text/css" href="/style.css" />
-	<link rel="stylesheet" media="(prefers-color-scheme: dark)" href="/style-dark.css">
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ranger with sixel support — Monochrome&#39;s Website</title>
+  <meta name="description" content="Random shit I find interesting will be here" />
+  <meta property="og:title" content="Ranger with sixel support" />
+  <meta property="og:description" content="Random shit I find interesting will be here" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://get-monochromed.github.io/tutorials/ranger-sixel/" />
+  <link rel="canonical" href="https://get-monochromed.github.io/tutorials/ranger-sixel/" />
+  <link rel="stylesheet" href="/css/main.min.d6a30ef26e3fa94505f40a4ca922f14fb66c6d3c9c3ad7db2bb5874f11105d6f.css" integrity="sha256-1qMO8m4/qUUF9ApMqSLxT7ZsbTycOtfbK7WHTxEQXW8=" />
+  <script src="/js/dock.min.0a9b6a005acb1cf4617081416d3668f208f2a5b15f80ec18f7c4a0587440a78a.js" integrity="sha256-CptqAFrLHPRhcIFBbTZo8gjypbFfgOwY98SgWHRAp4o=" defer></script>
+  
 </head>
-
 <body>
-	<div class="navbar">
-			<a href="/index.html">
-				Home
-			</a>
-			<a href="/blog/index.html">
-				Blog
-			</a>
-			<a class="nav-active" href="/tutorials/index.html">
-				Tutorials
-			</a>
-			<a href="/systeminfo/index.html">
-				SystemInfo
-			</a>
-	</div>
+  <div class="bg" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <span class="blob b4"></span>
+    <span class="grain"></span>
+    <span class="vignette"></span>
+  </div>
 
-	<h1> Tutorials </h1>
-	<br>
-	<div class="content"> 
-		<h2> Ranger with sixel support </h2>
-		<p> I personally use Sway as my window manager, which means I use wayland. But since wayland works in a different way compared to X11, some X11 programs won't work on wayland. One of which was Ranger's image previews. In my X11 days, I just used Ueberzug, but it won't work on Wayland, but the terminal I was using did support sixel image previews. So I was on the hunt to find a fork of ranger that works with sixel.
-		</p>
-		<p>
-		There is a chance that ranger will get sixel support soon, but for the time being you will have to compile from source.
-		</p>
-		<div class="codeblock">
-		<code>
-			git clone https://github.com/3ap/ranger <br>
-			cd ranger <br>
-			sudo make install <br>
-			ranger --copy-config=all <br>
-			vim $HOME/.config/ranger/rc.conf <br>
-			set preview_images_method sixel <br> 
-		</code>
-		</div>
+  
+<nav class="dock-wrap" id="dockWrap">
+  <div class="dock" id="dock" role="navigation" aria-label="Primary">
+    <span class="slider" id="dockSlider" aria-hidden="true"></span>
+    <a href="/" data-dock class="home-link ">Home</a>
+    <a href="/blog/" data-dock class="">Blog</a>
+    <a href="/tutorials/" data-dock class="active" aria-current="page">Tutorials</a>
+    <a href="/systeminfo/" data-dock class="">SystemInfo</a>
+  </div>
+</nav>
 
-		<p>
-		But... If you are using Arch Linux, then you only have to do
-		<code>
-			yay -S ranger-sixel-git<br>
-		</code>
-		</p>
-	</div>
+
+  <main class="wrap">
+    
+<div class="crumbs"><a href="/tutorials/">← tutorials</a></div>
+<article class="article">
+  <div class="eyebrow">tutorials · 19/12/2022</div>
+  <h1>Ranger with sixel support</h1>
+  <p class="lede">Building ranger from a sixel-preview fork, because Ueberzug does not work under Wayland.</p>
+  <div class="prose">
+    <p>I personally use Sway as my window manager, which means I use wayland. But since wayland works in a different way compared to X11, some X11 programs won&rsquo;t work on wayland. One of which was Ranger&rsquo;s image previews. In my X11 days, I just used Ueberzug, but it won&rsquo;t work on Wayland, but the terminal I was using did support sixel image previews. So I was on the hunt to find a fork of ranger that works with sixel.</p>
+<p>There is a chance that ranger will get sixel support soon, but for the time being you will have to compile from source.</p>
+<pre tabindex="0"><code>git clone https://github.com/3ap/ranger
+cd ranger
+sudo make install
+ranger --copy-config=all
+vim $HOME/.config/ranger/rc.conf
+set preview_images_method sixel</code></pre>
+<p>But&hellip; If you are using Arch Linux, then you only have to do <code>yay -S ranger-sixel-git</code></p>
+
+  </div>
+</article>
+
+  </main>
+
+  <footer class="wrap footer">
+    <p>Source <a href="https://github.com/get-monochromed/get-monochromed.github.io"><strong>code</strong></a> under <strong>AGPL3+</strong> · content under <strong>CC BY-SA 4.0</strong></p>
+  </footer>
 </body>
-
 </html>

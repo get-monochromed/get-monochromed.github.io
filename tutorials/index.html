@@ -1,40 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<title> Monochrome's Website</title>
-	<!-- Metadata thingies -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="canonical" href="https://get-monochromed.github.io" />
-	<link rel="stylesheet" type="text/css" href="/style.css" />
-	<link rel="stylesheet" media="(prefers-color-scheme: dark)" href="/style-dark.css">
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tutorials — Monochrome&#39;s Website</title>
+  <meta name="description" content="Short and practical. Written mostly so I stop forgetting them." />
+  <meta property="og:title" content="Tutorials" />
+  <meta property="og:description" content="Short and practical. Written mostly so I stop forgetting them." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://get-monochromed.github.io/tutorials/" />
+  <link rel="canonical" href="https://get-monochromed.github.io/tutorials/" />
+  <link rel="stylesheet" href="/css/main.min.d6a30ef26e3fa94505f40a4ca922f14fb66c6d3c9c3ad7db2bb5874f11105d6f.css" integrity="sha256-1qMO8m4/qUUF9ApMqSLxT7ZsbTycOtfbK7WHTxEQXW8=" />
+  <script src="/js/dock.min.0a9b6a005acb1cf4617081416d3668f208f2a5b15f80ec18f7c4a0587440a78a.js" integrity="sha256-CptqAFrLHPRhcIFBbTZo8gjypbFfgOwY98SgWHRAp4o=" defer></script>
+  <link rel="alternate" type="application/rss+xml" href="https://get-monochromed.github.io/tutorials/index.xml" title="Monochrome&#39;s Website" />
 </head>
-
 <body>
-	<div class="navbar">
-			<a href="/index.html">
-				Home
-			</a>
-			<a href="/blog/index.html">
-				Blog
-			</a>
-			<a class="nav-active" href="/tutorials/index.html">
-				Tutorials
-			</a>
-			<a href="/systeminfo/index.html">
-				SystemInfo
-			</a>
-	</div>
+  <div class="bg" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <span class="blob b4"></span>
+    <span class="grain"></span>
+    <span class="vignette"></span>
+  </div>
 
-	<h1> Tutorials </h1>
-	<br>
-	<div class="content"> 
-		<ol reversed>
-			<li><a href="/tutorials/tarball/index.html"> Tarballing without any fuzz</li>
-			<li><a href="/tutorials/ranger-sixel/index.html"> Ranger sixel </li>
-		</ol>
-	</div>
+  
+<nav class="dock-wrap" id="dockWrap">
+  <div class="dock" id="dock" role="navigation" aria-label="Primary">
+    <span class="slider" id="dockSlider" aria-hidden="true"></span>
+    <a href="/" data-dock class="home-link ">Home</a>
+    <a href="/blog/" data-dock class="">Blog</a>
+    <a href="/tutorials/" data-dock class="active" aria-current="page">Tutorials</a>
+    <a href="/systeminfo/" data-dock class="">SystemInfo</a>
+  </div>
+</nav>
+
+
+  <main class="wrap">
+    
+<header class="page-head">
+  <h1>Tutorials</h1>
+</header>
+
+<ul class="rows list-rows">
+  
+  <li>
+    <a href="/tutorials/tarball/">
+      <span class="row-date">1/2/2023</span>
+      <span class="row-main">
+        <span class="row-title">Tarballing without any fuzz</span>
+        <span class="row-desc">tar xzf, tar czf, and the mnemonic that actually makes them stick.</span>
+      </span>
+      <span class="row-arrow">→</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/tutorials/ranger-sixel/">
+      <span class="row-date">19/12/2022</span>
+      <span class="row-main">
+        <span class="row-title">Ranger with sixel support</span>
+        <span class="row-desc">Building ranger from a sixel-preview fork, because Ueberzug does not work under Wayland.</span>
+      </span>
+      <span class="row-arrow">→</span>
+    </a>
+  </li>
+  
+</ul>
+
+  </main>
+
+  <footer class="wrap footer">
+    <p>Source <a href="https://github.com/get-monochromed/get-monochromed.github.io"><strong>code</strong></a> under <strong>AGPL3+</strong> · content under <strong>CC BY-SA 4.0</strong></p>
+  </footer>
 </body>
-
 </html>

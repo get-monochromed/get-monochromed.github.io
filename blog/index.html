@@ -1,45 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<title> Monochrome's Website</title>
-	<!-- Metadata thingies -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="canonical" href="https://get-monochromed.github.io" />
-	<link rel="stylesheet" type="text/css" href="/style.css" />
-	<link rel="stylesheet" media="(prefers-color-scheme: dark)" href="/style-dark.css">
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog — Monochrome&#39;s Website</title>
+  <meta name="description" content="Longer-form posts. Mostly Linux, hardware, and things that annoyed me enough to write them down." />
+  <meta property="og:title" content="Blog" />
+  <meta property="og:description" content="Longer-form posts. Mostly Linux, hardware, and things that annoyed me enough to write them down." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://get-monochromed.github.io/blog/" />
+  <link rel="canonical" href="https://get-monochromed.github.io/blog/" />
+  <link rel="stylesheet" href="/css/main.min.d6a30ef26e3fa94505f40a4ca922f14fb66c6d3c9c3ad7db2bb5874f11105d6f.css" integrity="sha256-1qMO8m4/qUUF9ApMqSLxT7ZsbTycOtfbK7WHTxEQXW8=" />
+  <script src="/js/dock.min.0a9b6a005acb1cf4617081416d3668f208f2a5b15f80ec18f7c4a0587440a78a.js" integrity="sha256-CptqAFrLHPRhcIFBbTZo8gjypbFfgOwY98SgWHRAp4o=" defer></script>
+  <link rel="alternate" type="application/rss+xml" href="https://get-monochromed.github.io/blog/index.xml" title="Monochrome&#39;s Website" />
 </head>
-
 <body>
-	<div class="navbar">
-			<a href="/index.html">
-				Home
-			</a>
-			<a class="nav-active" href="/blog/index.html">
-				Blog
-			</a>
-			<a href="/tutorials/index.html">
-				Tutorials
-			</a>
-			<a href="/systeminfo/index.html">
-				SystemInfo
-			</a>
-	</div>
+  <div class="bg" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <span class="blob b4"></span>
+    <span class="grain"></span>
+    <span class="vignette"></span>
+  </div>
 
-	<h1> Blog </h1>
-	<br>
-	<div class="content"> 
-		<ol reversed>
-			<li>[Blog <a href="/blog/KDE-is-golden/index.html">KDE is golden</a></li>
-		    <li>[Blog] <a href="/blog/apple-hate/index.html">Apple Hate</a></li>
-			<li>[Blog] <a href="/blog/Fedora/index.html">Fedora is better than ever (ish)</a></li>
-			<li> [Blog] <a href="/blog/E14G7-Review/index.html">New ThinkPad day! Review: E14 Gen 7 AMD</a></li>
-			<li> [Blog] <a href="/blog/debian-to-arch/index.html">Friendship ended with Debian, Arch is my best friend now</a></li>
-			<li> [Blog] <a href="/blog/thinkchad/index.html">Mekkbook to ThinkChad</a> </li>
-			<li> [Interesting Find] <a href="/blog/pngphoon/index.html">PNGPHOON: Kinda cool Moonphase wallpaper generator</a> </li>
-		</ol>
-	</div>
+  
+<nav class="dock-wrap" id="dockWrap">
+  <div class="dock" id="dock" role="navigation" aria-label="Primary">
+    <span class="slider" id="dockSlider" aria-hidden="true"></span>
+    <a href="/" data-dock class="home-link ">Home</a>
+    <a href="/blog/" data-dock class="active" aria-current="page">Blog</a>
+    <a href="/tutorials/" data-dock class="">Tutorials</a>
+    <a href="/systeminfo/" data-dock class="">SystemInfo</a>
+  </div>
+</nav>
+
+
+  <main class="wrap">
+    
+<header class="page-head">
+  <h1>Blog</h1>
+</header>
+
+<ul class="rows list-rows">
+  
+  <li>
+    <a href="/blog/KDE-is-golden/">
+      <span class="row-date">2/7/2026</span>
+      <span class="row-main">
+        <span class="row-title">KDE is golden!</span>
+        <span class="row-desc">Years on GNOME, then ten minutes of KDE for me to switch, and I am not going back.</span>
+      </span>
+      <span class="row-arrow">→</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/blog/apple-hate/">
+      <span class="row-date">15/12/2025</span>
+      <span class="row-main">
+        <span class="row-title">Apple Hate</span>
+        <span class="row-desc">Why I will never buy another Apple product, from glued-in batteries to an OS that bricks itself.</span>
+      </span>
+      <span class="row-arrow">→</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/blog/Fedora/">
+      <span class="row-date">12/12/2025</span>
+      <span class="row-main">
+        <span class="row-title">Fedora is better than ever (ish)</span>
+        <span class="row-desc">dnf is the best package manager I have ever used, and also the thing that made me quit Fedora the first time.</span>
+      </span>
+      <span class="row-arrow">→</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/blog/E14G7-Review/">
+      <span class="row-date">29/11/2025</span>
+      <span class="row-main">
+        <span class="row-title">New ThinkPad Day!</span>
+        <span class="row-desc">Review : ThinkPad E14 Gen 7 AMD | I bought the cheapest ThinkPad Lenovo makes, maxed the spec, to finally replace the good ol&rsquo; reliable X220.</span>
+      </span>
+      <span class="row-arrow">→</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/blog/debian-to-arch/">
+      <span class="row-date">8/2/2023</span>
+      <span class="row-main">
+        <span class="row-title">Friendship ended with Debian, Arch is my bestfriend now</span>
+        <span class="row-desc">Debian&rsquo;s stable-but-stale packages and split repos sent me back to Arch, and the AUR is why I stayed.</span>
+      </span>
+      <span class="row-arrow">→</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/blog/thinkchad/">
+      <span class="row-date">17/1/2023</span>
+      <span class="row-main">
+        <span class="row-title">Mekkbook to ThinkChad</span>
+        <span class="row-desc">How I found a bucket of old ThinkPads in Bangalore and walked out with an X220 for 8000 rupees.</span>
+      </span>
+      <span class="row-arrow">→</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/blog/pngphoon/">
+      <span class="row-date">3/1/2023</span>
+      <span class="row-main">
+        <span class="row-title">PNGPHOON: Kinda cool Moonphase wallpaper generator</span>
+        <span class="row-desc">A bitmap moon-phase wallpaper generator, and why X11 root-window tools still have a place on Wayland.</span>
+      </span>
+      <span class="row-arrow">→</span>
+    </a>
+  </li>
+  
+</ul>
+
+  </main>
+
+  <footer class="wrap footer">
+    <p>Source <a href="https://github.com/get-monochromed/get-monochromed.github.io"><strong>code</strong></a> under <strong>AGPL3+</strong> · content under <strong>CC BY-SA 4.0</strong></p>
+  </footer>
 </body>
-
 </html>

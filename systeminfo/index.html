@@ -1,68 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<title> Monochrome's Website</title>
-	<!-- Metadata thingies -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="canonical" href="https://get-monochromed.github.io" />
-	<link rel="stylesheet" type="text/css" href="/style.css" />
-	<link rel="stylesheet" media="(prefers-color-scheme: dark)" href="/style-dark.css">
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SystemInfo — Monochrome&#39;s Website</title>
+  <meta name="description" content="Random shit I find interesting will be here" />
+  <meta property="og:title" content="SystemInfo" />
+  <meta property="og:description" content="Random shit I find interesting will be here" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://get-monochromed.github.io/systeminfo/" />
+  <link rel="canonical" href="https://get-monochromed.github.io/systeminfo/" />
+  <link rel="stylesheet" href="/css/main.min.d6a30ef26e3fa94505f40a4ca922f14fb66c6d3c9c3ad7db2bb5874f11105d6f.css" integrity="sha256-1qMO8m4/qUUF9ApMqSLxT7ZsbTycOtfbK7WHTxEQXW8=" />
+  <script src="/js/dock.min.0a9b6a005acb1cf4617081416d3668f208f2a5b15f80ec18f7c4a0587440a78a.js" integrity="sha256-CptqAFrLHPRhcIFBbTZo8gjypbFfgOwY98SgWHRAp4o=" defer></script>
+  <link rel="alternate" type="application/rss+xml" href="https://get-monochromed.github.io/systeminfo/index.xml" title="Monochrome&#39;s Website" />
 </head>
-
 <body>
-	<div class="navbar">
-			<a href="/index.html">
-				Home
-			</a>
-			<a href="/blog/index.html">
-				Blog
-			</a>
-			<a href="/tutorials/index.html">
-				Tutorials
-			</a>
-			<a  class="nav-active" href="/systeminfo/index.html">
-				SystemInfo
-			</a>
-	</div>
+  <div class="bg" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <span class="blob b4"></span>
+    <span class="grain"></span>
+    <span class="vignette"></span>
+  </div>
 
-	<h1> System Info </h1>
-	<br>
-	<div class="content"> 
+  
+<nav class="dock-wrap" id="dockWrap">
+  <div class="dock" id="dock" role="navigation" aria-label="Primary">
+    <span class="slider" id="dockSlider" aria-hidden="true"></span>
+    <a href="/" data-dock class="home-link ">Home</a>
+    <a href="/blog/" data-dock class="">Blog</a>
+    <a href="/tutorials/" data-dock class="">Tutorials</a>
+    <a href="/systeminfo/" data-dock class="active" aria-current="page">SystemInfo</a>
+  </div>
+</nav>
 
-		<ul>
-			<li> Laptop: Lenovo ThinkPad E14 Gen 7 AMD</li>
-			<li> CPU: Ryzen 7 250 (8c16t) </li>
-			<li> Memory: 32GB DDR5 5600MT/s </li>
-			<li> Screen: 14 inch 1920x1200p 16:10 </li>
-			<li> Distro: Fedora 44 </li>
-			<li> DE/WM : KDE Plasma 6.7</li>
-		</ul>
-		<!--
-		<ul> Retired Machines
-			<li> Laptop: Lenovo ThinkPad X220</li>
-			<li> CPU: Intel Core i5 2520M </li>
-			<li> Memory: 8GB DDR3 </li>
-			<li> Screen: 12.5 inch 1366x768p </li>
-			<li> Distro: Arch Linux </li>
-		</ul>
-		<ul>
-			<li> Laptop: Apple Macbook Pro 13 2019 (A1989)</li>
-			<li> CPU: Intel Core i5 8279U </li>
-			<li> GPU: Intel Iris Plus 655 </li>
-			<li> Memory: 8GB LPDDR3 </li>
-			<li> Screen: 13 inch 2560x1600p </li>
-			<li> Distro: MacOS :(</li>
-		</ul>
-		<ul>
-			<li> WM: Sway with Waybar</li>
-			<li> Editor: Neovim </li>
-			<li> Terminal: Foot </li>
-			<li> Colorscheme: Just Black & White (There's a reason why the name and website is monochrome) </li>
-		</ul>
-		-->
-	</div>
+
+  <main class="wrap">
+    
+<header class="page-head">
+  <h1>SystemInfo</h1>
+</header>
+
+<div class="prose section-body"><ul>
+<li>Laptop: Lenovo ThinkPad E14 Gen 7 AMD</li>
+<li>CPU: Ryzen 7 250 (8c16t)</li>
+<li>Memory: 32GB DDR5</li>
+<li>Storage: 1.5 TB</li>
+<li>Screen: 14 inch 1920x1200p</li>
+<li>Distro: Fedora Linux</li>
+<li>DE: KDE Plasma 6.7</li>
+</ul>
+<h2 id="retired">Retired</h2>
+<ul>
+<li>ThinkPad X220</li>
+<li>Acer Veriton MT-H610</li>
+</ul>
+</div>
+
+<ul class="rows list-rows">
+  
+</ul>
+
+  </main>
+
+  <footer class="wrap footer">
+    <p>Source <a href="https://github.com/get-monochromed/get-monochromed.github.io"><strong>code</strong></a> under <strong>AGPL3+</strong> · content under <strong>CC BY-SA 4.0</strong></p>
+  </footer>
 </body>
-
 </html>

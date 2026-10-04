@@ -1,58 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<title> Monochrome's Website</title>
-	<!-- Metadata thingies -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="canonical" href="https://get-monochromed.github.io" />
-	<link rel="stylesheet" type="text/css" href="/style.css" />
-	<link rel="stylesheet" media="(prefers-color-scheme: dark)" href="/style-dark.css">
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PNGPHOON: Kinda cool Moonphase wallpaper generator — Monochrome&#39;s Website</title>
+  <meta name="description" content="Random shit I find interesting will be here" />
+  <meta property="og:title" content="PNGPHOON: Kinda cool Moonphase wallpaper generator" />
+  <meta property="og:description" content="Random shit I find interesting will be here" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://get-monochromed.github.io/blog/pngphoon/" />
+  <link rel="canonical" href="https://get-monochromed.github.io/blog/pngphoon/" />
+  <link rel="stylesheet" href="/css/main.min.d6a30ef26e3fa94505f40a4ca922f14fb66c6d3c9c3ad7db2bb5874f11105d6f.css" integrity="sha256-1qMO8m4/qUUF9ApMqSLxT7ZsbTycOtfbK7WHTxEQXW8=" />
+  <script src="/js/dock.min.0a9b6a005acb1cf4617081416d3668f208f2a5b15f80ec18f7c4a0587440a78a.js" integrity="sha256-CptqAFrLHPRhcIFBbTZo8gjypbFfgOwY98SgWHRAp4o=" defer></script>
+  
 </head>
-
 <body>
-	<div class="navbar">
-			<a href="/index.html">
-				Home
-			</a>
-			<a class="nav-active" href="/blog/index.html">
-				Blog
-			</a>
-			<a href="/tutorials/index.html">
-				Tutorials
-			</a>
-			<a href="/systeminfo/index.html">
-				SystemInfo
-			</a>
-	</div>
+  <div class="bg" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <span class="blob b4"></span>
+    <span class="grain"></span>
+    <span class="vignette"></span>
+  </div>
 
-	<h1> Blog </h1>
-	<br>
-	<div class="content"> 
-		<h2> PNGPHOON: Kinda cool Moonphase wallpaper generator </h2>
-		<h5> 3/1/2023 </h5>
-		<p>
-		So, I was scrolling through reddit like usual, and found <a href="https://libreddit.kavin.rocks/r/unixporn/comments/zzqgjz/xmonad_bullshit_as_usual/">this post</a> on r/unixporn of this person on XMonad on Gentoo setup. No bar, just black and white terminal, and this really cool bitmap moon wallpaper. In the description it said something like "Wallpaper is made with Xphoon".
-		</p>
-		<p>
-		I was like <em> Nani sore? </em> (￣▽￣*)ゞ. So, I did a bit of digging and found out that there's this program called <a href="https://acme.com/software/phoon/">phoon</a> (PHase of mOON) which prints out the current phase of the moon in an ASCII art format.Then someone made a cooler version of it called <a href="https://acme.com/software/xphoon/">Xphoon</a> (X PHase of mOON) which generates really high quality bitmap image of the phase of the moon and puts that as the background of the root X11 window. 
-		</p>
-		<p>
-		"X11 root window". Boy I've'nt heard that name in ages, For the uninitiated, X11, the display server can have a background image, but you can only see it if you use a minimal window manager like XMonad, DWM etc, so chances that you will be able to see that background is pretty small if you are on a DE and such, also if you're on Wayland (like me), then, X11 is out of the question anyway.
-		</p>
-		<p>
-		So I looked again for similar shit, and found <a href="https://svolli.de/software/pngphoon/">pngphoon</a> which is exactly like Xphoon but it generates the image as png and wont set it as a wallpaper, which is great, now I can use it anywhere!!!. 
-		Its super easy to install as well, both pngphoon and Xphoon are available in debian's main repo. (idk about other distros, I only use Debian now.) So the only thing I had to do was
-		<code> sudo apt install pngphoon </code>
-		and create a wallpaper using
-		<code> pngphoon -w 1366 -h 768 -f moon768p.png -s 100</code>
-		w,h & h flag are mandatory, use the exact resolution of your screen to get pixel perfect bitmap image, if you use a resolution thats not native then the wallpaper wont "pop" . -f is to give the file a name and its mandatory, -s is star density, increase the number for more stars.
-		</p>
-		<p>
-		Since I set my wallpaper using my own script, I have added pngphoon to it as well, so I can just do setbg -x to set that wallpaper on demand.
-		</p>
-	</div>
+  
+<nav class="dock-wrap" id="dockWrap">
+  <div class="dock" id="dock" role="navigation" aria-label="Primary">
+    <span class="slider" id="dockSlider" aria-hidden="true"></span>
+    <a href="/" data-dock class="home-link ">Home</a>
+    <a href="/blog/" data-dock class="active" aria-current="page">Blog</a>
+    <a href="/tutorials/" data-dock class="">Tutorials</a>
+    <a href="/systeminfo/" data-dock class="">SystemInfo</a>
+  </div>
+</nav>
+
+
+  <main class="wrap">
+    
+<div class="crumbs"><a href="/blog/">← blog</a></div>
+<article class="article">
+  <div class="eyebrow">blog · 3/1/2023</div>
+  <h1>PNGPHOON: Kinda cool Moonphase wallpaper generator</h1>
+  <p class="lede">A bitmap moon-phase wallpaper generator, and why X11 root-window tools still have a place on Wayland.</p>
+  <div class="prose">
+    <p>So, I was scrolling through reddit like usual, and found <a href="https://libreddit.kavin.rocks/r/unixporn/comments/zzqgjz/xmonad_bullshit_as_usual/">this post</a> on r/unixporn of this person on XMonad on Gentoo setup. No bar, just black and white terminal, and this really cool bitmap moon wallpaper. In the description it said something like &ldquo;Wallpaper is made with Xphoon&rdquo;.</p>
+<p>I was like * Nani sore? * (￣▽￣*)ゞ. So, I did a bit of digging and found out that there&rsquo;s this program called <a href="https://acme.com/software/phoon/">phoon</a> (PHase of mOON) which prints out the current phase of the moon in an ASCII art format.Then someone made a cooler version of it called <a href="https://acme.com/software/xphoon/">Xphoon</a> (X PHase of mOON) which generates really high quality bitmap image of the phase of the moon and puts that as the background of the root X11 window.</p>
+<p>&ldquo;X11 root window&rdquo;. Boy I&rsquo;ve&rsquo;nt heard that name in ages, For the uninitiated, X11, the display server can have a background image, but you can only see it if you use a minimal window manager like XMonad, DWM etc, so chances that you will be able to see that background is pretty small if you are on a DE and such, also if you&rsquo;re on Wayland (like me), then, X11 is out of the question anyway.</p>
+<p>So I looked again for similar shit, and found <a href="https://svolli.de/software/pngphoon/">pngphoon</a> which is exactly like Xphoon but it generates the image as png and wont set it as a wallpaper, which is great, now I can use it anywhere!!!. Its super easy to install as well, both pngphoon and Xphoon are available in debian&rsquo;s main repo. (idk about other distros, I only use Debian now.) So the only thing I had to do was <code>sudo apt install pngphoon</code> and create a wallpaper using <code>pngphoon -w 1366 -h 768 -f moon768p.png -s 100</code> w,h &amp; h flag are mandatory, use the exact resolution of your screen to get pixel perfect bitmap image, if you use a resolution thats not native then the wallpaper wont &ldquo;pop&rdquo; . -f is to give the file a name and its mandatory, -s is star density, increase the number for more stars.</p>
+<p>Since I set my wallpaper using my own script, I have added pngphoon to it as well, so I can just do setbg -x to set that wallpaper on demand.</p>
+
+  </div>
+</article>
+
+  </main>
+
+  <footer class="wrap footer">
+    <p>Source <a href="https://github.com/get-monochromed/get-monochromed.github.io"><strong>code</strong></a> under <strong>AGPL3+</strong> · content under <strong>CC BY-SA 4.0</strong></p>
+  </footer>
 </body>
-
 </html>

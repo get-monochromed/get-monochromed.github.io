@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Tutorials on Monochrome&#39;s Website</title>
+		<link>https://get-monochromed.github.io/tutorials/</link>
+		<description>Recent content in Tutorials on Monochrome&#39;s Website</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 01 Feb 2023 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://get-monochromed.github.io/tutorials/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Tarballing without any fuzz</title>
+				<link>https://get-monochromed.github.io/tutorials/tarball/</link>
+				<pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
+				<guid>https://get-monochromed.github.io/tutorials/tarball/</guid>
+				<description>tar xzf, tar czf, and the mnemonic that actually makes them stick.</description>
+			</item>
+			<item>
+				<title>Ranger with sixel support</title>
+				<link>https://get-monochromed.github.io/tutorials/ranger-sixel/</link>
+				<pubDate>Mon, 19 Dec 2022 00:00:00 +0000</pubDate>
+				<guid>https://get-monochromed.github.io/tutorials/ranger-sixel/</guid>
+				<description>Building ranger from a sixel-preview fork, because Ueberzug does not work under Wayland.</description>
+			</item>
+	</channel>
+</rss>

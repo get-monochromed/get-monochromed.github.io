@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>monochromium on Monochrome&#39;s Website</title>
+		<link>https://get-monochromed.github.io/</link>
+		<description>Recent content in monochromium on Monochrome&#39;s Website</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 02 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://get-monochromed.github.io/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>KDE is golden!</title>
+				<link>https://get-monochromed.github.io/blog/KDE-is-golden/</link>
+				<pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://get-monochromed.github.io/blog/KDE-is-golden/</guid>
+				<description>Years on GNOME, then ten minutes of KDE for me to switch, and I am not going back.</description>
+			</item>
+			<item>
+				<title>Apple Hate</title>
+				<link>https://get-monochromed.github.io/blog/apple-hate/</link>
+				<pubDate>Mon, 15 Dec 2025 00:00:00 +0000</pubDate>
+				<guid>https://get-monochromed.github.io/blog/apple-hate/</guid>
+				<description>Why I will never buy another Apple product, from glued-in batteries to an OS that bricks itself.</description>
+			</item>
+			<item>
+				<title>Fedora is better than ever (ish)</title>
+				<link>https://get-monochromed.github.io/blog/Fedora/</link>
+				<pubDate>Fri, 12 Dec 2025 00:00:00 +0000</pubDate>
+				<guid>https://get-monochromed.github.io/blog/Fedora/</guid>
+				<description>dnf is the best package manager I have ever used, and also the thing that made me quit Fedora the first time.</description>
+			</item>
+			<item>
+				<title>New ThinkPad Day!</title>
+				<link>https://get-monochromed.github.io/blog/E14G7-Review/</link>
+				<pubDate>Sat, 29 Nov 2025 00:00:00 +0000</pubDate>
+				<guid>https://get-monochromed.github.io/blog/E14G7-Review/</guid>
+				<description>Review : ThinkPad E14 Gen 7 AMD | I bought the cheapest ThinkPad Lenovo makes, maxed the spec, to finally replace the good ol&amp;rsquo; reliable X220.</description>
+			</item>
+			<item>
+				<title>Friendship ended with Debian, Arch is my bestfriend now</title>
+				<link>https://get-monochromed.github.io/blog/debian-to-arch/</link>
+				<pubDate>Wed, 08 Feb 2023 00:00:00 +0000</pubDate>
+				<guid>https://get-monochromed.github.io/blog/debian-to-arch/</guid>
+				<description>Debian&amp;rsquo;s stable-but-stale packages and split repos sent me back to Arch, and the AUR is why I stayed.</description>
+			</item>
+			<item>
+				<title>Tarballing without any fuzz</title>
+				<link>https://get-monochromed.github.io/tutorials/tarball/</link>
+				<pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
+				<guid>https://get-monochromed.github.io/tutorials/tarball/</guid>
+				<description>tar xzf, tar czf, and the mnemonic that actually makes them stick.</description>
+			</item>
+			<item>
+				<title>Mekkbook to ThinkChad</title>
+				<link>https://get-monochromed.github.io/blog/thinkchad/</link>
+				<pubDate>Tue, 17 Jan 2023 00:00:00 +0000</pubDate>
+				<guid>https://get-monochromed.github.io/blog/thinkchad/</guid>
+				<description>How I found a bucket of old ThinkPads in Bangalore and walked out with an X220 for 8000 rupees.</description>
+			</item>
+			<item>
+				<title>PNGPHOON: Kinda cool Moonphase wallpaper generator</title>
+				<link>https://get-monochromed.github.io/blog/pngphoon/</link>
+				<pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
+				<guid>https://get-monochromed.github.io/blog/pngphoon/</guid>
+				<description>A bitmap moon-phase wallpaper generator, and why X11 root-window tools still have a place on Wayland.</description>
+			</item>
+			<item>
+				<title>Ranger with sixel support</title>
+				<link>https://get-monochromed.github.io/tutorials/ranger-sixel/</link>
+				<pubDate>Mon, 19 Dec 2022 00:00:00 +0000</pubDate>
+				<guid>https://get-monochromed.github.io/tutorials/ranger-sixel/</guid>
+				<description>Building ranger from a sixel-preview fork, because Ueberzug does not work under Wayland.</description>
+			</item>
+	</channel>
+</rss>
