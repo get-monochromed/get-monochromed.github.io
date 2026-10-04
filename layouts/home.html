@@ -21,18 +21,4 @@
   </ul>
 </section>
 
-<section class="section">
-  <div class="section-head"><h2>Tutorials</h2><a href="/tutorials/">all →</a></div>
-  <ul class="rows">
-    {{ range (where .Site.RegularPages "Type" "tutorials").ByDate.Reverse }}
-    <li>
-      <a href="{{ .RelPermalink }}">
-        <span class="row-kicker">howto</span>
-        <span class="row-title">{{ .Title }}</span>
-        <span class="row-date">{{ .Date.Format "2/1/2006" }}</span>
-      </a>
-    </li>
-    {{ end }}
-  </ul>
-</section>
 {{ end }}
