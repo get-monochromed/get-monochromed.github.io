@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Thu, 02 Jul 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Sat, 22 Aug 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://get-monochromed.github.io/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Omarchy Review (so far)</title>
+				<link>https://get-monochromed.github.io/blog/omarchy/</link>
+				<pubDate>Sat, 22 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>https://get-monochromed.github.io/blog/omarchy/</guid>
+				<description>What Omarchy is actually like to use, from someone who hand-built a Sway setup over years and daily-drives KDE.</description>
+			</item>
 			<item>
 				<title>KDE is golden!</title>
 				<link>https://get-monochromed.github.io/blog/KDE-is-golden/</link>

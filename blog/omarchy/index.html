@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Omarchy Review (so far) — Monochrome&#39;s Website</title>
+  <meta name="description" content="Random shit I find interesting will be here" />
+  <meta property="og:title" content="Omarchy Review (so far)" />
+  <meta property="og:description" content="Random shit I find interesting will be here" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://get-monochromed.github.io/blog/omarchy/" />
+  <link rel="canonical" href="https://get-monochromed.github.io/blog/omarchy/" />
+  <link rel="stylesheet" href="/css/main.min.4817b6a75927aa2cae2bbdd3136a13ca49e5196766dea964e0bc0ae3eb51542c.css" integrity="sha256-SBe2p1knqiyuK73TE2oTyknlGWdm3qlk4LwK4&#43;tRVCw=" />
+  <script src="/js/dock.min.0a9b6a005acb1cf4617081416d3668f208f2a5b15f80ec18f7c4a0587440a78a.js" integrity="sha256-CptqAFrLHPRhcIFBbTZo8gjypbFfgOwY98SgWHRAp4o=" defer></script>
+  
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <span class="blob b4"></span>
+    <span class="grain"></span>
+    <span class="vignette"></span>
+  </div>
+
+  
+<nav class="dock-wrap" id="dockWrap">
+  <div class="dock" id="dock" role="navigation" aria-label="Primary">
+    <span class="slider" id="dockSlider" aria-hidden="true"></span>
+    <a href="/" data-dock class="home-link ">Home</a>
+    <a href="/blog/" data-dock class="active" aria-current="page">Blog</a>
+    <a href="/tutorials/" data-dock class="">Tutorials</a>
+    <a href="/systeminfo/" data-dock class="">SystemInfo</a>
+  </div>
+</nav>
+
+
+  <main class="wrap">
+    
+<div class="crumbs"><a href="/blog/">← blog</a></div>
+<article class="article">
+  <div class="eyebrow">blog · 22/8/2026</div>
+  <h1>Omarchy Review (so far)</h1>
+  <p class="lede">What Omarchy is actually like to use, from someone who hand-built a Sway setup over years and daily-drives KDE.</p>
+  <div class="prose">
+    <p>this would be primarily broken down into</p>
+<ul>
+<li>
+<p>from the perspective of a tiling window manager setup (I have a setup that I spent years hand-picking and setting up to my liking. ie; configuring everything. can be found on <a href="https://codeberg.org/monochrome/monochrome-sway-dots">https://codeberg.org/monochrome/monochrome-sway-dots</a>. So I have a rough idea of how much work needs to be put in to make a cohesive tiling Desktop Environment like setup, and how frustrating it is, to have spent years and still cant get some basic things working.</p>
+</li>
+<li>
+<p>Comparing it to a full fledged desktop environment like KDE. I like the feature set of KDE, thats why its my main DE as of right now.</p>
+</li>
+<li>
+<p>ease-of-use features or prebuilt programs that save you time from installing and configuring.</p>
+</li>
+<li>
+<p>general appreciation of things that I thought was quite interesting to add and me appreciating the development team for adding such features.</p>
+</li>
+</ul>
+<h2 id="the-tiling-de-experience">The Tiling DE Experience</h2>
+<p>I moved from MacOS to Linux for the first time just because of tiling window managers. I have used many of em (DWM patching and modding included, ugh&hellip;) Nowadays, I just use KDE. I like tiling more than floating window managers, but I simply dont want to bother with everything thats related to setting up tiling window managers.</p>
+<p>Omarchy uses hyprland and quickshell (Quickshell is new addition to version 4, the older ones were using just waybar and tui tools to get the same effect), I have seen &ldquo;better&rdquo; rices elsewhere, unlike popular beliefs, the main part of Omarchy imo is not the ricing and theming (tho its the main visible part, so people base their opinions on that). Sure, it has some themes, its not the best and ive seen better waaay better themes elsewhere. Even when it comes to quickshell implementations, Noctalia, DMS etc are much more feature complete than what omarchy uses.</p>
+<p>The stock setup is good, not great. themes are nice but not amazing. I&rsquo;ll give it a solid B-.</p>
+<h3 id="the-bar">The Bar</h3>
+<p>The quick shell implementation is clean. very thin bar, very minimal, takes up less space and gets out of your way. I like that, thats what I did on my sway set as well. the bar should be minimal.</p>
+<p>in the quickshell bar, what little it has, its very feature rich, with things i want to have already set up</p>
+<p>from left to right,</p>
+<p><img src="/images/omarchy-01_hu_dc69fc81187cb632.webp"
+     width="548" height="56"
+     loading="lazy" decoding="async" alt="The Omarchy status bar: dictation, screen recording, screen sharing, do-not-disturb, mute and caffeine toggles, then the clock and weather"></p>
+<p>it has quick toggles for things i want to have, like dictations, quick screen recording, reminders, caffeine etc, which auto hides away when not needed. This is a thing I needed to set up manually, especially the screen recording part. (having it preconfigured means i waste less time)</p>
+<p><img src="/images/omarchy-02_hu_5e21009398653fdb.webp"
+     width="421" height="466"
+     loading="lazy" decoding="async" alt="Quick toggles for dictation, screen recording, reminders and caffeine"></p>
+<p>i like the set of features in the wifi section, has the networks speeds directly in there, kde also has it, but its a few clicks away and a bit on the laggier side. the ability to share the wifi password with a qr code is a good addition, built in speed test as well. my isp randomly will have network slowdowns, so i like the existence of the speed test right there. (i think thats also on KDE). speedtest also looks quite nice on this one. (there is also a disk speed test program that looks exactly like this as well)</p>
+<p><img src="/images/omarchy-03_hu_73c061c9eb73a2a.webp"
+     width="683" height="542"
+     loading="lazy" decoding="async" alt="Wi-Fi panel with live network speeds, QR password sharing and a built-in speed test"></p>
+<p>my upload speed is now very low, not sure why, it happens randomly. so having it in a super accessible location is wonderful.</p>
+<p>Same for the ability to quickly change DNS servers. This is a common thing that happens for me, when the DNS resolution task takes a good chunk of time for lord knows what reason and therefore I have to change the DNS server to something else quickly to get internet to be usable. This usually requires me to go to the router configuration page and manually edit things and then restart the router to get it working. But I don&rsquo;t want to make changes to the router configuration when someone else is also using the router. This feature of having the DNS server directly into the WiFi option completely eliminates all the problems that I have. I can switch DNS servers regardless of what others are doing with the network. (sure these <strong>can</strong> be done using KDE and others, but its more effort to do)</p>
+<p><img src="/images/omarchy-04_hu_3ec769b727365633.webp"
+     width="402" height="532"
+     loading="lazy" decoding="async" alt="Brightness controls, including per-monitor brightness and screen scaling"></p>
+<p>in the brightness option, i can change the brightness of any of my monitors directly from here. All I need to do is is make sure my mouse is on the monitor i want to change brightness of, press the brightness buttons on my laptop or scroll the brightness part on the bar or open the brightness menu in the bar and move the slider. GNOME does not have this feature. KDE does have this feature but it only works with your built-in screen of the laptop when I use the buttons and the scrolling. You can change the brightness of other monitors by only using the slider in KDE. But this one is more cohesive.</p>
+<p>On top of that, I do have the ability to just change the scaling of the screen directly from a button. This is useful when Im recording a YouTube video because I prefer my text to be relatively small but while making a YouTube video, I need it to be larger. Usually what I would do is set up a completely different terminal and a different key binding to open that terminal with a large font on it so whenever I make YouTube videos its less cumbersome. Or I will change my font before recording the video just to have everything set up correctly. Sometimes I even have to crop in a video afterwards just to make sure that everything is visible. Meanwhile here I can just press the 2x button, everything becomes bigger and its easier to record a YouTube video. This is a convenience feature that I genuinely think is important.</p>
+<p><img src="/images/omarchy-05_hu_b38e53c8caae71f6.webp"
+     width="397" height="249"
+     loading="lazy" decoding="async" alt="Battery panel showing charge and discharge wattage"></p>
+<p>The battery section has one important feature which is charging and discharging wattages. I have a relatively small battery, on top of that, I have a processor that does not have any efficiency cores. So I get pretty bad battery life if I don&rsquo;t monitor my discharge wattage and close programs that is running heavily on the CPU or GPU. It is a lot easier to do this on Omarchy. On KDE what I generally do is open up a program like Btop and then measure wattages. I can also press a key binding to just get a notification on how much battery is being drained at all times.</p>
+<h3 id="hyprland-and-tiling">Hyprland and tiling</h3>
+<p>I am going to skip through most of the hyprland typical things because it&rsquo;s common on all hyprland systems but one thing to note is that apart from themes, this one has a lot of pre-configured key binding set up and a lot of other rules and things which I could personally do on my own but that would require me to spend multiple hours inside the hyprland wiki, arch wiki and many other places meanwhile I don&rsquo;t have to worry about any of it, because it is already pre-done for me.</p>
+<p>I would say that compared to other distributions with window managers and my own personal window manager setups, compared to all of that, Omarchy key bindings are not the greatest but it is still usable enough and the fact that Hyprland now has trackpad gestures which makes it significantly easier to use with a trackpad does completely eliminate a lot of problems that I had faced before with pre-configured window manager setups where you find the key bindings really uncomfortable to use and need to replace everything, which means i waste more time. the ability to use the trackpad and shortcuts combined means i haven&rsquo;t needed to change any bindings that much. thus no time wasted.</p>
+<h3 id="the-menu">The Menu</h3>
+<p><img src="/images/omarchy-06_hu_ee03bbc780e74a6b.webp"
+     width="511" height="817"
+     loading="lazy" decoding="async" alt="The Omarchy menu, used for packages, themes, settings and editing configs"></p>
+<p>Almost everything in Omarchy is done through this menu system which includes installing, removing packages, installing and removing all the built-in programs that you dont want, adding web apps, settings, changing themes, editing themes, customizing the whole system, all of that can be done inside this small window, which is really useful. This kind of bridges some of the annoyances you would find on a typical window manager setup. Maybe not as good as Noctalia Shell and its implementation of a whole settings page, but very close enough.</p>
+<p>I can make quick changes on hyprland without needing to edit any configs, or lets you open configs directly without needing to <code>cd</code> into the folders and opening neovim.</p>
+<p>All-in-all makes me want to keep using a tiling system since I dont have the major drawbacks of using a tiling system.</p>
+<p>A full explanation of the menu system is on youtube by DHH himself (<a href="https://www.youtube.com/watch?v=F7fe9pa8OeE">https://www.youtube.com/watch?v=F7fe9pa8OeE</a>), its almost an hour long, thats how much is there on that menu system.</p>
+<h2 id="the-niceties">The niceties</h2>
+<p>If I have to pick some of my favorite features, it would be</p>
+<ul>
+<li>
+<p>has disk encryption and it automatically logs you into hyprland without needing any login managers. therefore you only need to type in your passcode once.</p>
+</li>
+<li>
+<p>during every update, it creates a snapshot for you to roll back to</p>
+</li>
+<li>
+<p>there is a reset option to completely reset the whole system like on windows, so you can give your PC to someone else with fresh omarchy. the reset will delete your disk encryption keys and wipe everything etc. There is also an option to install the OS without adding the usernames and other things, so you can do an OEM install and let the end user set the basic things up</p>
+</li>
+<li>
+<p>the ability to pick a font from the list or install a font directly from there and being able to set it everywhere without needing to manually edit everything by hand</p>
+</li>
+<li>
+<p>easy access to your main few config files</p>
+</li>
+<li>
+<p>the package installer</p>
+<p><img src="/images/omarchy-07_hu_8c042d80cca961bf.webp"
+     width="937" height="646"
+     loading="lazy" decoding="async" alt="The package installer, with several packages selected at once"></p>
+<p>This is so useful, you can search packages, select multiple ones and install em all at the same time. This is some thing I had created for my old sway setup long ago and used it to bits since then. Having the same thing here without me needing to create it is wonderful.</p>
+</li>
+<li>
+<p>One thing that I like about desktop environments compared to typical window manager setups is that, when you install those, you have the ability to set up fingerprints without any other work or custom config editing, etc etc. All you have to do is go into settings and just enable it. It is equally easy in Omarchy, when I installed the operating system, it automatically prompted me that there is a fingerprint that you could set up. I just pressed a notification and within two seconds I am able to just put my fingerprint in and it works like you would expect in every place. Full stop. I once tried to do the same thing with my sway setup on the same machine on Arch, but for some reason, even though I did the same thing that Arch wiki told me to do, there were some sort of errors where I have to type in my password and also use a fingerprint at the same time. I just don&rsquo;t understand what the problem could be. But here, there is no problems like that. Everything works like you would expect.</p>
+</li>
+<li>
+<p>There are many pre-installed software and webapps that I personally use on a daily basis so I don&rsquo;t have to install any of that. like obsidian, kdenlive, OBS studio, discord, whatsapp etc, with some nice simple programs like omawrite, which is a simple scratchpad markdown program to quickly open and type something out, format it etc etc.</p>
+</li>
+<li>
+<p><img src="/images/omarchy-08_hu_e24490bc074b36a1.webp"
+     width="1075" height="1010"
+     loading="lazy" decoding="async" alt="VoxType&rsquo;s configuration screen, showing the installed Whisper speech model"></p>
+<p>One of the preinstalled programs is VoxType, It is a dictation software where you can just turn it on, start speaking and it will record everything, process it locally and then it comes out as text. And its really, really good. About 80% of the script is written by just me speaking directly onto the computer instead of spending time typing it out. It was so good in fact that I spent about 3 hours at night from 2 -3 am in the morning to go to 5-6 am in the morning trying to set the same program up in Fedora. But unfortunately that was not as easy as on omarchy where you just press one button in the menu system that says dictate, you press that, it installs, configures everything. Meanwhile it was a lot of work to get the correct dependencies met and KDE supports different kind of protocols on wayland compared to Hyprland etc. And some programs were simply missing from the binary so I had to fetch them manually etc. etc. It was a lot of work.</p>
+</li>
+<li>
+<p><img src="/images/omarchy-09_hu_a8aa1374450ae835.webp"
+     srcset="/images/omarchy-09_hu_9a7fab96ede6e8e3.webp 760w, /images/omarchy-09_hu_a8aa1374450ae835.webp 1400w"
+     sizes="(max-width: 900px) 100vw, 860px"
+     width="1400" height="714"
+     loading="lazy" decoding="async" alt="opencode installing a package and running it from a plain-language prompt"></p>
+<p>Another point of friction for me at least from trying out window managers again was the fact that I have to spend a lot of time in the effort browsing arch wiki, hyprland wiki and other forums to fix problems or add features, whichever it might be, even if it&rsquo;s a very simple one I&rsquo;ll have to spend a lot of time to set it up. which generally is not the case with desktop environments but here in omarchy there is a program called open code which is an AI based program that can interact with your computer directly and the developers have added some sort of extra feature so it is taught what to do so if it&rsquo;s something related to omarchy or Hyprland there is some sort of instructions already pre-configured for it so it knows what to do. For the things that require me to spend a lot of time, that I am not able to do within 15 to 20 minutes, I just let the program do it for me. I&rsquo;ll just ask what I need to do, it will do all the thinking, look up all the wikis and then it will give me an answer. it can be set up to just tell me an answer or I can also set it up to execute that answer directly. In this image I told it to open a terminal, install the package and then use the package to run an output and it does all of that without any issues. So for things that I dont want to spent time on, it will look everything up, apply changes, check for errors, if there are errors, it fixes them automatically, all while I can go eat food, shower etc etc. I know you guys hate AI and what not cus thats part of your personalities and lifestyle now, i think its useful, i waste less time like a nerd trying to figure it out, let the machine take care of it while i do things thats more worth my time.</p>
+</li>
+<li>
+<p><img src="/images/omarchy-10_hu_b6db92a1d3e216cc.webp"
+     width="530" height="213"
+     loading="lazy" decoding="async" alt="The pre-installed Chromium extension that narrows the WhatsApp chat list"></p>
+<p>the default chromium browser had an pre installed extension i never knew about, WhatsApp is annoying to use on a browser cus the chat list window is sooo wide and immovable, its nice to know about the existence of this extension which solves that problem. when i logged into whatsapp on omarchy, i thought whatsapp finally updated the website to make it more usable, but nope, just omarchy team&rsquo;s extensions.</p>
+</li>
+<li>
+<p>Using the built-in open code AI system, every time a program crashes, you get a notification asking whether you want to use that error messages and crash logs and send it to open code for letting it figure out what the hell happened and giving you a solution. A lot of people do that manually by opening ChatGPT on a browser. So having it part of your system, integrated well seems like a good idea compared to just finding the errors manually and then using some AI platform on a browser.</p>
+</li>
+<li>
+<p>Maybe last but not the least just basic programs like the screen recorder that is built in or the screenshot tool that is built in All of them seem to do everything I need it to do, be it annotations in screenshots, or quick video recording with microphone audio etc. it is not as good as KDE but it is very close enough.</p>
+</li>
+<li>
+<p>Yeah, I forgot to include one important bit. Omarchy has their own repositories. They are not using any of the arch repositories. they have their own other repositories hosted in cloudflare servers and is so extremely quick. So extremely quick that even regular Indian mirrors simply cannot match. I have used Arch for about 8 years and I have to admit, every once in a while you have to redo the mirrorlist to get it working again. This is just so quick. It&rsquo;s almost mind-numbingly quick.</p>
+</li>
+</ul>
+<h2 id="things-i-havent-tested-or-need-time-to-figure-out">things i havent tested or need time to figure out</h2>
+<ul>
+<li>
+<p>Since the OS is on their own repository, the operating system is apparently one month behind normal mirrors and it&rsquo;s supposed to be more stable. I am not entirely sure how that will pan out.</p>
+</li>
+<li>
+<p>omarchy is designed to be very quick and easy to do development. It has one click installations for a lot of programming related stuff and it also keeps everything updated etc etc. I am not a programmer therefore I have not checked any of this. It is supposed to be significantly faster and easier to use than other distributions.</p>
+</li>
+<li>
+<p>Similar to the programming one, there is also built-in options for AI coding stuff like claude code and other programs like OpenAI codex etc. Many people use that for development. Some companies even force developers into using that. I have personally heard about stories of people getting fired because they did not use the chat GPT AI that they were provided to use. So having an option for that is also very nice. It is not forced into you. You can skip it very easily if you dont want to. As I mentioned I don&rsquo;t do programming, therefore I don&rsquo;t really need claude and other AI coding helpers so I haven&rsquo;t been able to test any of it.</p>
+</li>
+</ul>
+
+  </div>
+</article>
+
+  </main>
+
+  <footer class="wrap footer">
+    <p>Source <a href="https://github.com/get-monochromed/get-monochromed.github.io"><strong>code</strong></a> under <strong>AGPL3+</strong> · content under <strong>CC BY-SA 4.0</strong></p>
+  </footer>
+</body>
+</html>
