@@ -4,6 +4,8 @@
 {{- $name := path.Base .Destination -}}
 {{- $img := resources.Get (printf "images/%s" $name) -}}
 {{- if $img -}}
+{{- $w := $img.Width -}}
+{{- if gt $w 1400 -}}
 {{- $lg := $img.Resize "1400x webp q82" -}}
 {{- $sm := $img.Resize "760x webp q78" -}}
 <img src="{{ $lg.RelPermalink }}"
@@ -11,6 +13,14 @@
      sizes="(max-width: 900px) 100vw, 860px"
      width="{{ $lg.Width }}" height="{{ $lg.Height }}"
      loading="lazy" decoding="async" alt="{{ .Text }}">
+{{- else -}}
+{{- /* Never upscale. Most screenshots are narrower than 1400px, and resizing
+       those up would blur them and inflate the file for no gain. */ -}}
+{{- $one := $img.Resize (printf "%dx webp q82" $w) -}}
+<img src="{{ $one.RelPermalink }}"
+     width="{{ $one.Width }}" height="{{ $one.Height }}"
+     loading="lazy" decoding="async" alt="{{ .Text }}">
+{{- end -}}
 {{- else -}}
 {{- warnf "render-image: no file at assets/images/%s (referenced from %s) — the <img> below will 404" $name .Page.File.Path -}}
 <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy">
