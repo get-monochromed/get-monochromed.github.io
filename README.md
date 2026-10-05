@@ -4,6 +4,10 @@ Hugo site. Content is markdown; the visual language (frosted glass background,
 the pill nav with a sliding indicator, dot-matrix labels) lives in
 `assets/css/main.css` and `assets/js/dock.js`.
 
+On a phone the pill hangs off the **bottom** edge of the screen instead (thumb
+reach), with a back-to-top arrow as its last item; on a wider window it is back
+at the top with the same four links.
+
 Everything below assumes you are in the project directory:
 
 ```bash
@@ -160,6 +164,16 @@ Both knobs are commented in `assets/css/main.css`:
   `assets/js/dock.js`, in milliseconds. How long the pointer must rest on a nav
   item before the pill slides to it. Raise it if the pill feels twitchy when you
   sweep across the bar, lower it for snappier tracking.
+- **Touch delay on the pill** — `TOUCH_NAV_DELAY`, also at the top of
+  `assets/js/dock.js`. A phone has no hover, so a tap is the only chance the pill
+  gets to move; this is how long the navigation is held back so the slide can be
+  seen before the page changes. Set it to `0` for immediate navigation, or raise
+  it if the pill still looks like it jumps. It is ignored under
+  `prefers-reduced-motion`, where there is no slide to wait for.
+- **Where the dock sits** — the `max-width:640px` block at the bottom of
+  `assets/css/main.css` moves it to the bottom edge (and flips the
+  hide-on-scroll direction). Change the breakpoint there if a tablet should get
+  the phone layout too.
 
 The blobs drift but no longer scale (scaling a blurred layer forced the blur
 to be re-rendered every frame). To get the "breathing" back, add

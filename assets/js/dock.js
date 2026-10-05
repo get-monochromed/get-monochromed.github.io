@@ -14,14 +14,25 @@
   // tracking.
   const HOVER_INTENT = 100;
 
+  // Phones only: how long a tap waits before the page changes, so the pill has
+  // time to slide to the item you tapped. Touch has no hover, so this delay is
+  // the only window in which the movement can be seen at all — at 0 the tap
+  // navigates at once and the dock looks static on a phone. Nothing to show
+  // under reduced motion, so there we do not wait.
+  const TOUCH_NAV_DELAY = reduce ? 0 : 240;
+
   const links = [...dock.querySelectorAll("[data-dock]")];
   const active = dock.querySelector(".active") || links[0];
+  const top = dock.querySelector(".to-top");
 
   let swapTimer = 0;
   let intentTimer = 0;
   let frame = 0;
   let pending = null;
   let snapToken = 0;
+  let fingerTap = false;   // last pointerdown came from a finger, not a mouse
+  let downX = 0;
+  let downY = 0;
 
   const current = () => dock.querySelector(".on-pill") || active;
 
@@ -97,10 +108,57 @@
       clearTimeout(intentTimer);
       place(a);
     });
+    // Touch, which has no hover at all. The pill moves on finger-down — the only
+    // moment before the page changes in which it can be seen to move — and the
+    // click handler below holds the navigation back just long enough for it to
+    // get there.
+    a.addEventListener("pointerdown", (e) => {
+      fingerTap = e.pointerType === "touch";
+      if (!fingerTap) return;
+      downX = e.clientX;
+      downY = e.clientY;
+      clearTimeout(intentTimer);
+      place(a);
+    });
   });
   dock.addEventListener("mouseleave", () => {
     clearTimeout(intentTimer);
     place(active);
+  });
+  // A finger that slides away is scrolling the page, not choosing an item, so
+  // put the pill back instead of parking it under a wandering tap.
+  dock.addEventListener("pointermove", (e) => {
+    if (!fingerTap || e.pointerType !== "touch") return;
+    if (Math.abs(e.clientX - downX) + Math.abs(e.clientY - downY) < 12) return;
+    fingerTap = false;
+    place(active);
+  });
+
+  // The last item in the dock, phones only. Plain `href="#"` is already "top of
+  // the page" without JS; smooth scrolling needs the short circuit.
+  if (top) {
+    top.addEventListener("click", (e) => {
+      e.preventDefault();
+      fingerTap = false;
+      scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+      // The pill is only borrowed while the arrow is being pressed: put it back
+      // on the page you are actually on once the scroll has started.
+      setTimeout(() => place(active), 500);
+    });
+  }
+
+  // On a phone the tap would otherwise unload the page while the pill is still
+  // crossing, and the landing page snaps the pill into place, so no movement is
+  // ever visible. This is the piece that makes the dock animate on touch. The
+  // item for the page you are already on has nothing to animate — the pill is
+  // parked on it — so that one still navigates at once.
+  dock.addEventListener("click", (e) => {
+    const a = e.target.closest("[data-dock]");
+    if (!a || a === top || a === active || TOUCH_NAV_DELAY === 0) return;
+    if (!fingerTap && !matchMedia("(hover: none)").matches) return;
+    e.preventDefault();
+    fingerTap = false;
+    setTimeout(() => { location.href = a.href; }, TOUCH_NAV_DELAY);
   });
 
   // Hide on scroll down, show on scroll up.

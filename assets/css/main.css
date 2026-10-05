@@ -140,6 +140,14 @@ body{
    because of source order. */
 .dock a.home-link{font-family:var(--font-mono);font-weight:400}
 
+/* Back-to-top item. It is a real item in the dock (the sliding pill can rest on
+   it like any other), but only for phones — the media query at the bottom of
+   this file switches it on along with the bottom-anchored dock. The icon is
+   sized in `em` so its box ends up exactly as tall as a text item's, at both
+   phone breakpoints. */
+.dock a.to-top{display:none;align-items:center;justify-content:center;padding:.5rem .75rem}
+.dock a.to-top svg{display:block;width:1em;height:1em}
+
 /* ---- page type: no boxes, just air ---- */
 .intro{padding:4.5rem 0 1rem}
 .eyebrow{font-family:var(--font-mono);font-size:.78rem;letter-spacing:.06em;color:var(--muted)}
@@ -204,7 +212,30 @@ body{
   .row-kicker{display:none}
   .row-date{font-size:.72rem}
   .list-rows li a{grid-template-columns:5.2rem 1fr auto;gap:.7rem}
-  .dock a{padding:.55rem .8rem;font-size:.78rem}
+
+  /* ---- phones: the dock hangs off the bottom edge ----
+     The top of a phone screen is the far corner from the thumb and fights the
+     browser's own toolbar; the bottom is where the hand already is. Same pill,
+     same frost, same sliding indicator — only the anchor moves, so the
+     hide-on-scroll has to slide it down off the screen instead of up. The dock
+     is fixed here (it used to be sticky, i.e. in the flow) which is why the
+     body needs the matching room at the end of the page. */
+  .dock-wrap{position:fixed;top:auto;left:0;right:0;padding:0 8px;
+    bottom:calc(env(safe-area-inset-bottom,0px) + 12px)}
+  .dock-wrap.hide{transform:translateY(calc(100% + 24px))}
+  .dock{max-width:100%}
+  body{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 5.25rem)}
+
+  /* Five items in the same bar: trim each one so the row still fits a 360px
+     phone without wrapping. */
+  .dock a{padding:.5rem .68rem;font-size:.78rem}
+  .dock a.to-top{display:inline-flex}
+}
+
+/* Small phones (360px and narrower) — the dock is still the tightest row on the
+   page, so give it one more notch. */
+@media (max-width:380px){
+  .dock a{padding:.5rem .55rem;font-size:.74rem}
 }
 @media (prefers-reduced-motion:reduce){
   .blob{animation:none;will-change:auto}
