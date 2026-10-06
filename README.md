@@ -132,7 +132,24 @@ in, `draft: true`. Write, look at it at <http://localhost:1313>, then set
 
 ---
 
-## Building the real site
+## Publishing
+
+There is a script for this — `blog` (in `~/.local/bin`):
+
+```bash
+blog add "blog: my new post"      # draft in content/blog/, opens the dev server + editor
+blog add "tutorial: fzf magic"    # draft in content/tutorials/ → /tutorials/fzf-magic/
+blog push                         # draft: false → clean build → mirror into the Pages repo → push → verify
+```
+
+The prefix picks the section, so it is the word that ends up in the URL. `blog push`
+takes an optional commit message; otherwise the message is **exactly** what you typed at
+`blog add`. It refuses to run on a dirty Pages repo, off `main`, or when the build holds
+a dev/nested copy, and it also refreshes the `hugo` source branch so the site stays
+rebuildable from GitHub. When there is no draft (you edited an already-published post) it
+re-publishes the current content instead.
+
+### Under the hood, by hand
 
 Preview mode serves from memory. To produce the actual files:
 
@@ -141,10 +158,16 @@ hugo --gc --cleanDestinationDir
 ```
 
 Output lands in `public/`. `--gc` clears stale generated images, and
-`--cleanDestinationDir` deletes files left over from *previous* builds —
-without it, old fingerprinted CSS/JS versions accumulate in `public/` and get
-published alongside the current ones. A clean build prints no `WARN` or
-`ERROR` lines; if it does, fix them before publishing.
+`--cleanDestinationDir` deletes files left over from *previous* builds — without
+it, old fingerprinted CSS/JS versions accumulate in `public/` and get
+published alongside the current ones. A clean build prints no `WARN` or `ERROR`
+lines; if it does, fix them before publishing.
+
+The site is served from **built files** in `~/Documents/Git/pages` (no CI), so a manual
+publish is: build, wipe that repo (keeping `.git`), copy `public/.` in, `git checkout
+old-site -- LICENSE`, `touch .nojekyll`, commit, push. Two things bite here: copying the
+`public` *directory* instead of its contents nests a `public/` in the repo, and the wipe
+deletes `LICENSE` unless it is checked out again. `blog push` does both for you.
 
 After editing CSS or JS you do not need to do anything special: both go
 through Hugo's asset pipeline, so the filenames are content-hashed

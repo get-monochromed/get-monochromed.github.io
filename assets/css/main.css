@@ -252,3 +252,67 @@ body{
   .blob{animation:none;will-change:auto}
   .dock-wrap,.slider,.rows li a{transition:none}
 }
+
+/* ============================================================
+   Fullscreen image viewer (assets/js/lightbox.js)
+   Clicking a body image opens the source-resolution webp over the
+   page. The layer sits above the dock (z-index 20) and is its own
+   little dark room, so the inks here are fixed light-on-dark rather
+   than the page's theme variables — it looks the same in both themes,
+   which is the point of a lightbox.
+   ============================================================ */
+/* The affordance that says a picture is clickable. */
+.prose img[data-full]{cursor:zoom-in}
+/* The page behind must not scroll while the viewer is up (mobile especially). */
+html.lb-open{overflow:hidden}
+
+.lb{position:fixed;inset:0;z-index:60;overflow:hidden;
+  background:rgba(8,8,10,.86);
+  -webkit-backdrop-filter:blur(22px) saturate(1.25);
+  backdrop-filter:blur(22px) saturate(1.25);
+  /* Our own pinch, no browser page-zoom, no scroll chaining. */
+  touch-action:none;overscroll-behavior:contain}
+.lb[hidden]{display:none}
+@media (prefers-reduced-motion:no-preference){
+  @keyframes lb-in{from{opacity:0}to{opacity:1}}
+  .lb:not([hidden]){animation:lb-in .18s ease both}
+}
+
+/* Absolutely placed and pulled back by half its own size rather than centred by
+   flex/grid: an overflowing grid item is clamped to the container's start edge
+   instead of being centred, which leaves a full-resolution image hanging off the
+   corner. Left/top 50% + negative margins centres it at any size, which is also
+   the point the zoom maths anchors to (the transform-origin). */
+.lb-img{position:absolute;left:50%;top:50%;display:block;max-width:none;max-height:none;
+  transform-origin:50% 50%;
+  border-radius:14px;border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 30px 80px rgba(0,0,0,.55);
+  user-select:none;-webkit-user-drag:none;
+  will-change:transform;transition:none;opacity:0}
+.lb-img.is-ready{opacity:1}
+/* Only the click/double-tap toggle eases; easing a pan or a pinch would lag it. */
+.lb.is-anim .lb-img{transition:transform .2s ease,opacity .2s ease}
+.lb.is-zoomed .lb-img{cursor:grab}
+.lb.is-panning .lb-img{cursor:grabbing}
+
+/* Flat UI screenshots arrive from a slow link at full resolution — say so. */
+.lb.is-loading::after{content:"";width:26px;height:26px;border-radius:50%;
+  border:2px solid rgba(255,255,255,.22);border-top-color:rgba(255,255,255,.9);
+  animation:lb-spin .7s linear infinite}
+@keyframes lb-spin{to{transform:rotate(1turn)}}
+
+.lb-close{position:absolute;top:max(14px,env(safe-area-inset-top,0px));right:14px;
+  width:44px;height:44px;display:grid;place-items:center;padding:0;
+  font:inherit;font-size:22px;line-height:1;color:#fafafa;cursor:pointer;
+  border-radius:50%;border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.09);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.lb-close:hover{background:rgba(255,255,255,.18)}
+.lb-close:focus-visible{outline:2px solid rgba(255,255,255,.7);outline-offset:2px}
+
+/* Tells you the gestures once, on open, then fades out of the way. */
+.lb-hint{position:absolute;left:0;right:0;bottom:max(16px,env(safe-area-inset-bottom,0px));
+  margin:0;text-align:center;font-size:.78rem;color:rgba(255,255,255,.6);
+  opacity:0;transition:opacity .5s ease;pointer-events:none}
+.lb-hint.is-visible{opacity:1}
+.lb.is-zoomed .lb-hint{opacity:0}

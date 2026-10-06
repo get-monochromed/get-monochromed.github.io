@@ -2,6 +2,7 @@
 <html lang="{{ site.Language.Locale | default "en" }}">
 {{- $css := resources.Get "css/main.css" | minify | fingerprint -}}
 {{- $js := resources.Get "js/dock.js" | minify | fingerprint -}}
+{{- $lb := resources.Get "js/lightbox.js" | minify | fingerprint -}}
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -14,6 +15,7 @@
   <link rel="canonical" href="{{ .Permalink }}" />
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" />
   <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+  <script src="{{ $lb.RelPermalink }}" integrity="{{ $lb.Data.Integrity }}" defer></script>
   {{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}" />{{ end }}
 </head>
 <body>

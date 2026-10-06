@@ -5,20 +5,30 @@
 {{- $img := resources.Get (printf "images/%s" $name) -}}
 {{- if $img -}}
 {{- $w := $img.Width -}}
+{{- /* data-full is what the lightbox opens: the source file's own pixel
+       dimensions, re-encoded to webp and NOT downscaled. It is fetched only
+       when someone actually clicks an image, so the inline page stays cheap.
+       q85 rather than the inline q82 — this is the copy that gets zoomed into,
+       where webp banding on flat UI colours shows. */ -}}
 {{- if gt $w 1400 -}}
 {{- $lg := $img.Resize "1400x webp q82" -}}
 {{- $sm := $img.Resize "760x webp q78" -}}
+{{- $full := $img.Resize (printf "%dx webp q85" $w) -}}
 <img src="{{ $lg.RelPermalink }}"
      srcset="{{ $sm.RelPermalink }} 760w, {{ $lg.RelPermalink }} 1400w"
      sizes="(max-width: 900px) 100vw, 860px"
      width="{{ $lg.Width }}" height="{{ $lg.Height }}"
+     data-full="{{ $full.RelPermalink }}" data-full-w="{{ $full.Width }}" data-full-h="{{ $full.Height }}"
      loading="lazy" decoding="async" alt="{{ .Text }}">
 {{- else -}}
 {{- /* Never upscale. Most screenshots are narrower than 1400px, and resizing
-       those up would blur them and inflate the file for no gain. */ -}}
+       those up would blur them and inflate the file for no gain. This copy is
+       already at source width, so the lightbox reuses it instead of generating
+       a second identical file. */ -}}
 {{- $one := $img.Resize (printf "%dx webp q82" $w) -}}
 <img src="{{ $one.RelPermalink }}"
      width="{{ $one.Width }}" height="{{ $one.Height }}"
+     data-full="{{ $one.RelPermalink }}" data-full-w="{{ $one.Width }}" data-full-h="{{ $one.Height }}"
      loading="lazy" decoding="async" alt="{{ .Text }}">
 {{- end -}}
 {{- else -}}
