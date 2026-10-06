@@ -20,6 +20,13 @@
   /* FIX: these two stacks were pasted as literals 12 times */
   --font-sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --font-mono:DepartureMono,ui-monospace,Menlo,Consolas,monospace;
+  /* The one width the whole site is built on. Posts, listings, tutorials and the
+     home page all use it, so the left and right margins are always equal — a
+     narrower element inside a wider container was what made the blog page look
+     off-centre (body text 44rem left-aligned in an 860px column left 156px of
+     dead space on one side only). Tune this single number to change the column
+     and the line length together; they cannot drift apart. */
+  --measure:44rem;
   /* Body-text heading scale. The post title deliberately sits a step above
      --h-sec, so a section heading never competes with the page title.
      Tune these two numbers to taste; they apply to every post at once. */
@@ -91,7 +98,9 @@ body{
 .vignette{position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 10%,transparent 55%,rgba(0,0,0,.14) 100%)}
 @media (prefers-color-scheme:dark){.vignette{background:radial-gradient(120% 90% at 50% 10%,transparent 50%,rgba(0,0,0,.5) 100%)}}
 
-.wrap{width:min(860px,calc(100% - 2.5rem));margin:0 auto}
+/* One column, always centred, with equal margins either side. `100% - 2.5rem`
+   is what a phone gets, so the measure only ever decides the desktop width. */
+.wrap{width:min(var(--measure),calc(100% - 2.5rem));margin:0 auto}
 
 /* ---- dock: the only pill. ----------------------------------
    PERF: backdrop blur 32px -> 24px, saturate 200% -> 180%. The
@@ -183,7 +192,9 @@ body{
 .article{padding:1rem 0 3rem}
 .article h1{font-family:var(--font-sans);font-weight:800;font-size:clamp(2rem,4.6vw,3rem);letter-spacing:-.035em;line-height:1.05;margin:.5rem 0 1rem}
 .article .lede{margin-bottom:2rem}
-.prose{max-width:44rem}
+/* Same measure as the container, so body text can never be narrower than the
+   column it sits in (that was the off-centre look). */
+.prose{max-width:var(--measure)}
 .prose p{margin:1.1rem 0;color:inherit}
 /* Body headings. `#` and `##` are styled identically, so a stray `#` inside a
    post reads as a section instead of as a second page title — it used to

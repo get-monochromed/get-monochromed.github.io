@@ -174,6 +174,12 @@ Both knobs are commented in `assets/css/main.css`:
   `assets/css/main.css` moves it to the bottom edge (and flips the
   hide-on-scroll direction). Change the breakpoint there if a tablet should get
   the phone layout too.
+- **Column width** — `--measure` in `:root`. One number sets the width of the
+  whole site: the container and the body-text column both read it, so the side
+  margins always match and the line length can never drift from the column.
+  Everything is built on it, so widening it widens posts, listings and the home
+  page together. Below ~744px the column is the screen minus 2.5rem instead, so
+  this only decides the desktop width.
 
 The blobs drift but no longer scale (scaling a blurred layer forced the blur
 to be re-rendered every frame). To get the "breathing" back, add
