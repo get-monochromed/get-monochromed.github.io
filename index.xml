@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Sat, 22 Aug 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Tue, 06 Oct 2026 18:20:03 +0530</lastBuildDate>
 		
 			<atom:link href="https://get-monochromed.github.io/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Ubuntu isn&#39;t *that* awful!</title>
+				<link>https://get-monochromed.github.io/blog/ubuntu-review/</link>
+				<pubDate>Tue, 06 Oct 2026 18:20:03 +0530</pubDate>
+				<guid>https://get-monochromed.github.io/blog/ubuntu-review/</guid>
+				<description>ubuntu is better optimised? but snaps and gnome hold it back.</description>
+			</item>
 			<item>
 				<title>Omarchy Review (so far)</title>
 				<link>https://get-monochromed.github.io/blog/omarchy/</link>

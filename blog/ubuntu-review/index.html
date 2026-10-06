@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Ubuntu isn&#39;t *that* awful! — Monochrome&#39;s Website</title>
+  <meta name="description" content="Random shit I find interesting will be here" />
+  <meta property="og:title" content="Ubuntu isn&#39;t *that* awful!" />
+  <meta property="og:description" content="Random shit I find interesting will be here" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://get-monochromed.github.io/blog/ubuntu-review/" />
+  <link rel="canonical" href="https://get-monochromed.github.io/blog/ubuntu-review/" />
+  <link rel="stylesheet" href="/css/main.min.076737d4ef74403d54d96071bcae75eafb4144603c677b9b8e6374bb7bf5637f.css" integrity="sha256-B2c31O90QD1U2WBxvK516vtBRGA8Z3ubjmN0u3v1Y38=" />
+  <script src="/js/dock.min.72a414caaa04f0bc63aa2a3ed12188b07cf9cd1b427ca29be8c7396611e8ca90.js" integrity="sha256-cqQUyqoE8Lxjqio&#43;0SGIsHz5zRtCfKKb6Mc5ZhHoypA=" defer></script>
+  
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <span class="blob b4"></span>
+    <span class="grain"></span>
+    <span class="vignette"></span>
+  </div>
+
+  
+<nav class="dock-wrap" id="dockWrap">
+  <div class="dock" id="dock" role="navigation" aria-label="Primary">
+    <span class="slider" id="dockSlider" aria-hidden="true"></span>
+    <a href="/" data-dock class="home-link ">Home</a>
+    <a href="/blog/" data-dock class="active" aria-current="page">Blog</a>
+    <a href="/tutorials/" data-dock class="">Tutorials</a>
+    <a href="/systeminfo/" data-dock class="">SystemInfo</a>
+    
+    <a href="#" data-dock class="to-top" id="dockTop" aria-label="Back to top" title="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5.5 11.5 12 5l6.5 6.5"/></svg>
+    </a>
+  </div>
+</nav>
+
+
+  <main class="wrap">
+    
+<div class="crumbs"><a href="/blog/">← blog</a></div>
+<article class="article">
+  <div class="eyebrow">blog · 6/10/2026</div>
+  <h1>Ubuntu isn&#39;t *that* awful!</h1>
+  <p class="lede">ubuntu is better optimised? but snaps and gnome hold it back.</p>
+  <div class="prose">
+    <p>I havent used ubuntu as my main OS ever. All the 8+ years of using linux and never have I used ubuntu on anything but computer labs in schools and colleges.</p>
+<p>So I thought of using Ubuntu 26.04 LTS for a few days and see how it fares against Fedora KDE, which is my go-to distribution recently.</p>
+<p>When you think of Ubuntu, the first thing that comes to mind is gnome with a few extensions and snaps and a whole lot of bad decisions that they made in the past! I didnt forget that whole amazon spyware thing lol.</p>
+<p>As of writing this blog, I have not spent a large amount of time on Ubuntu. I think I have done about a few days and that too light use only. I haven&rsquo;t completely converted everything to Ubuntu because I havent gotten the time to set up every single thing that I have on the Fedora side to ubuntu. So my experience is mostly the basic one. I might make additions to this blog down the line when I have more things to say about ubuntu.</p>
+<h2 id="positives">Positives</h2>
+<h3 id="the-looks">The looks</h3>
+<p>Modern Ubuntu does look good by default. I used to really really dislike the look of ubuntu, but its much nicer now than it used to look
+<img src="/images/ubuntu-rice_hu_4adee3190ddf8f07.webp"
+     srcset="/images/ubuntu-rice_hu_a826fafa343118c6.webp 760w, /images/ubuntu-rice_hu_4adee3190ddf8f07.webp 1400w"
+     sizes="(max-width: 900px) 100vw, 860px"
+     width="1400" height="875"
+     loading="lazy" decoding="async" alt="Ubuntu rice">
+I love the new changes to the folder icons as well.
+The built-in extensions make GNOME slightly more usable by having quarter tiling, dock and desktop icons.</p>
+<h3 id="ubuntudebian-base">Ubuntu/Debian base</h3>
+<p>since this is debian based, I can simply download a <code>.deb</code> file and install it. That is one of the major advantages of using Ubuntu over any other distribution. If any company makes a software available for Linux, the first candidate for support would be Ubuntu. That on top of the vast packages you already have on both ubuntu repos and snaps, you have a majority of software available to you. This becomes more obvious as you try to install stuff that are enterprise related.</p>
+<p>Recently <code>.rpm</code> also seems to show up on many software I found on the web as well.</p>
+<h3 id="battery-life-is-insane">Battery life is insane!</h3>
+<p>battery life seems to be good. system is idling very low wattage compared to Fedora. I cant figure out why exactly. My fedora machine used to idle at around 5-6W of total power draw (ie; total power draw from the battery), which I thought was good for an AMD CPU with no efficiency cores. But when I installed Ubuntu,  the same machine now idles at 3.5-4W more often. which is absurdly low. I tried adding a few tweaks to the Fedora system with powertop tuning, some kernel tuning and even letting the CPU run at 419Mhz when idling (which it was not able to do in fedora cus somehow the pstate driver locks the system to a minimum of 1.1Ghz)
+I can get an pure idle power draw of about 4.5W and light text editing/chatting etc at 5W ish.
+<img src="/images/fedora-lowest-power_hu_8856e1dcf85a3bc7.webp"
+     width="316" height="247"
+     loading="lazy" decoding="async" alt="lowest wattage on Fedora"></p>
+<p>Meanwhile stock ubuntu can do an idle draw of just 3.5W (even going as low as 3W once) <img src="/images/ubuntu-low-wattage_hu_3fcd5a848149b31d.webp"
+     width="263" height="128"
+     loading="lazy" decoding="async" alt="Ubuntu lowest wattage"></p>
+<p>You might think, oh its just 1-2 Watts. thats so small, almost neglible 🤣, but its not. I have a 45Wh battery, and if my computer hypothetically only uses about 5W of power, then I get a hypothetical battery life of 45/5= 9 hours. Now, if the machine is only using 3.5W instead of 5, now that hypothetical battery life goes up to 45/3.5 ≈ 13h. that is <strong>3 more</strong> hours than 5W. This is the same reason why Apple&rsquo;s laptops have insane battery life. The Macbook Neo only has 36.5Wh battery, but the whole machine only draws about 2.3-3.5W of power on light usage, giving the user about 36.5/3.5 ≈ 10.5h to 36.5/2.3 ≈ 16h of battery life.</p>
+<p>This was my normal battery life I was able to achieve just from using the computer for light discord chatting, some web browsing and studying with a pdf open and idling.
+<img src="/images/ubuntu-battery-life_hu_b6c77bb1aaffdce9.webp"
+     srcset="/images/ubuntu-battery-life_hu_7790ea666139c8e0.webp 760w, /images/ubuntu-battery-life_hu_b6c77bb1aaffdce9.webp 1400w"
+     sizes="(max-width: 900px) 100vw, 860px"
+     width="1400" height="307"
+     loading="lazy" decoding="async" alt="ubuntu battery life">
+One thing that I do not know about Ubuntut is whether or not GNOME Desktop Environment is the reason why I&rsquo;m getting good battery life because I haven&rsquo;t thoroughly tested the KDE Kubuntu system yet. I just live booted it up on a USB stick and the power usage is similar to what I see on Fedora KDE, maybe slightly higher as well. So, it may or may not be GNOME related as well, I&rsquo;m not entirely sure.</p>
+<h2 id="negatives">negatives</h2>
+<ol>
+<li>
+<p><strong>GNOME</strong></p>
+</li>
+<li>
+<p>One of the first things that I saw as soon as I installed the distro is that, the app icons on the overview is extremely small compared to what it is on GNOME. I was able to fix it by installing an extension (this is going to be a trend lol)</p>
+</li>
+<li>
+<p>Snap do not have the same level of packages that flatpaks have, therefore the chance of you finding an application as flatpaks is significantly higher than the ones you would find on Snap. I tried finding programs like Gnome Tweaks and a few others as snaps from the App Store but they don&rsquo;t exist. Helium browser also does not exist but discord was there so a few programs are there but not a lot of them.</p>
+</li>
+<li>
+<p>sushi (the program that gives you space bar preview in file manager) is not preinstalled for some reason, so is curl and a few other software.</p>
+</li>
+<li>
+<p>snaps dont work half the time.</p>
+<ul>
+<li>I tried installing opencode desktop as a snap, it throws some errors on launch and crashes.</li>
+<li>I tried installing gnome boxes as a snap, and it will let me create a VM and install and OS to it, but when I want to boot up the installed OS, the app crashes <strong>every single time</strong></li>
+<li>I installed Kdenlive to edit a video, and the icon for Kdenlive is not showing up</li>
+</ul>
+<p>If snaps worked properly when I installed them, I would&rsquo;ve had a better opinion about it.</p>
+</li>
+</ol>
+
+  </div>
+</article>
+
+  </main>
+
+  <footer class="wrap footer">
+    <p>Source <a href="https://github.com/get-monochromed/get-monochromed.github.io"><strong>code</strong></a> under <strong>AGPL3+</strong> · content under <strong>CC BY-SA 4.0</strong></p>
+  </footer>
+</body>
+</html>
