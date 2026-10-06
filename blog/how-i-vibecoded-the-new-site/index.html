@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>How I Vibecoded the New Site — Monochrome&#39;s Website</title>
+  <meta name="description" content="Random shit I find interesting will be here" />
+  <meta property="og:title" content="How I Vibecoded the New Site" />
+  <meta property="og:description" content="Random shit I find interesting will be here" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://get-monochromed.github.io/blog/how-i-vibecoded-the-new-site/" />
+  <link rel="canonical" href="https://get-monochromed.github.io/blog/how-i-vibecoded-the-new-site/" />
+  <link rel="stylesheet" href="/css/main.min.d695268cafa5ab451b226385fb9be746c02ea7a413267c3ad91ece91f45dd232.css" integrity="sha256-1pUmjK&#43;lq0UbImOF&#43;5vnRsAup6QTJnw62R7OkfRd0jI=" />
+  <script src="/js/dock.min.72a414caaa04f0bc63aa2a3ed12188b07cf9cd1b427ca29be8c7396611e8ca90.js" integrity="sha256-cqQUyqoE8Lxjqio&#43;0SGIsHz5zRtCfKKb6Mc5ZhHoypA=" defer></script>
+  <script src="/js/lightbox.min.2c4169f950dc34322177af19131459543436f7d4569c228e01d21ddf7d70ef06.js" integrity="sha256-LEFp&#43;VDcNDIhd68ZExRZVDQ299RWnCKOAdId331w7wY=" defer></script>
+  
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <span class="blob b4"></span>
+    <span class="grain"></span>
+    <span class="vignette"></span>
+  </div>
+
+  
+<nav class="dock-wrap" id="dockWrap">
+  <div class="dock" id="dock" role="navigation" aria-label="Primary">
+    <span class="slider" id="dockSlider" aria-hidden="true"></span>
+    <a href="/" data-dock class="home-link ">Home</a>
+    <a href="/blog/" data-dock class="active" aria-current="page">Blog</a>
+    <a href="/tutorials/" data-dock class="">Tutorials</a>
+    <a href="/systeminfo/" data-dock class="">SystemInfo</a>
+    
+    <a href="#" data-dock class="to-top" id="dockTop" aria-label="Back to top" title="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5.5 11.5 12 5l6.5 6.5"/></svg>
+    </a>
+  </div>
+</nav>
+
+
+  <main class="wrap">
+    
+<div class="crumbs"><a href="/blog/">← blog</a></div>
+<article class="article">
+  <div class="eyebrow">blog · 6/10/2026</div>
+  <h1>How I Vibecoded the New Site</h1>
+  <p class="lede">I vibecoded a fresh blog site and automated all the pain points to make blog creation super easy.</p>
+  <div class="prose">
+    <p>If you read my blogs, which is probably just the 1% of the friends that I have (or even less), you might know that my site is very very very minimal. Its somewhat on purpose for the the looks and due to my lack of html/css/js knowledge.</p>
+<p>Even with my lack of knowledge of HTML, JavaScript and CSS, I tried to make the site somewhat usable for phones as well. But I simply never bothered adding new blogs to the site, mostly because I was writing them manually in HTML every - single - time. And that is a lot of work.</p>
+<p>I did have this idea of just having a Markdown file. You write your blog in a <code>.md</code> file and then you use one of those static website generation tools to make it into a webpage. I tried to understand how Hugo and some other tools are supposed to be used, but I&rsquo;m too dumb to understand any of it properly. I had a few friends who had custom website similar to it with Hugo and another program that I cannot remember, I even tried to follow a tutorial, but I didn&rsquo;t really understand half of it either So I just gave up.</p>
+<h2 id="what-changed-now">What changed now?</h2>
+<p>To me, at least, if I want to write something as a blog, I want it to be as friction-free as possible. I just do the bare minimum. I run a small command, I get something to type the text in, Once that done, I run a small command and it is generated into a website and then pushed to the Github repository to the account. I just made that happened today with the help of Hugo and an AI agent.</p>
+<p>I have Hermes set up as my main AI agent for almost all of my tasks and it is really really really useful with Linux. I have used Hermes to make some plugins for KDE, but that is not part of this context so I&rsquo;m not going to explain about it. Maybe I&rsquo;ll make a separate blog for Hermes. I just asked Hermes to create a setup where I just create an MD file and then it will just create the website for me. And on top of that I wanted a different look, so I worked with Muse Spark (which is an AI model by Meta) on Open Code. its free on OpenCode and I wont have to burn a lot of my DeepSeek tokens to prototype multiple themes. I told it to generate something similar to Apple&rsquo;s liquid glass or older Apple&rsquo;s kind of frosted design with a little bit of design cues taken from nothing where they have the the N-Dot fonts here and there. They have a little bit of frosting happening here and there as well. So I wanted something similar to it. I gave that as my prompt and then I made few changes like making the whole background of frosted glass and then some slight adjustments here and there. I&rsquo;m really happy with the pill that is on the top. Its got animations when you move your mouse around. That was a little bit of work to get properly done but it was really worth it at the end.</p>
+<p>I don&rsquo;t even need to type anymore, I have a program called VoxType which records my voice and then transcribes that into text using an AI model that is running locally on my system. It&rsquo;s extremely quick, the model is tiny, only a few hundred megabytes, so it is instantaneous for me, even tho I dont have any VRAM, so the model is running on slow DDR5 system RAM intead. All I have to do is press a button then start speaking into the microphone. Once I&rsquo;m done talking, I press that button again and within half a second the whole thing is transcribed and it prints out instantly.</p>
+<h2 id="adding-features-is-instant">Adding features is instant</h2>
+<p>Since the people who are reading the blog is not me, I have sent the link to a few friends of mine to see if they can find me any bugs or issues or recommendations. ProAdmin on discord gave me a recommendation to have the pillbox on the bottom for the phone, which made sense. It&rsquo;s easier to reach on the bottom. So I did that and added a scroll up button as well, integrated that onto the bottom pill.</p>
+<p>You may or may not know but the pillbox actually has blur in it. When you scroll down, it does disappear but when you scroll up, the whole thing comes down and if you are going through an image or something colorful, you can see the blur in action.</p>
+<p>Yes, of course, the theme has both dark and light modes and it automatically changes based on your system&rsquo;s dark or light theme instead of having a hideous button on the top right which you have to manually click every single time. I find it really annoying when people do that.</p>
+<p>my buddy charlie boy (no one calls em that, just me 🤣) asked for a full screen mode for images + zoom, and that too was just a 5 minute job thanks to Hermes.</p>
+<p>As of right now, I don&rsquo;t really have any telemetry on the website at all. I do want to have the bare minimum, but I think you have to host it somewhere else or do some complex work for it to happen. I just want to know if people actually read this shit and where they are reading it from and that&rsquo;s kind of it. Like three people reading it from India, two people in Germany, one in America, something like that. That would be nice, but probably someday in the future, I don&rsquo;t really want to add any hideous cookie banner or any of that. Maybe I&rsquo;ll add a small section where people could just add in the message saying &ldquo;hi, I was here&rdquo; etc.</p>
+<h2 id="automate-the-automation-automatorception">automate the automation! Automatorception!!</h2>
+<p>To make my life even even easier, since this is Hugo in the backend, I made hermes create a program called <code>blog</code>. If I type in a command like <code>blog add blog: this Spiderman movie is amazing</code> Then it will go to my website&rsquo;s folder, use hugo commands to create the required empty md file inside the blog folder. If I run the command <code>blog add tutorial:How to setup distro box</code>, it will create that title inside the tutorials folder etc. Then it launches a very simple text editor called kwrite where I can type in my blog. It will launch the hugo server in the background, and launch the local server URL on my browser as well, so I can see how the blog will look. Once im done with everything. I save my md file. run <code>blog push</code> and it will do all the stuff to convert that md file into html, then push that to github with a commit message taken from the <code>blog add</code> command.</p>
+<h2 id="ultimate-end-game-automation">ultimate end game automation</h2>
+<p>I do have a better ultimate end game setup for blogs and YouTube. That might happen soon. The plan is to have a program, I run it, Voxtype starts recording my voice, I speak for an hour or two, try to dump everything that I have in my brain, Whatever I want to talk about and then once it dictates all of that into text, the text will be kind of mishmash of a lot of things. Some parts don&rsquo;t need to be there and some contents may need to be swapped around. So all of that data will be passed to an AI agent which will refactor the whole thing without making it sound completely different and kind of set up the whole brain dump into something like a YouTube script where it has content and it is properly segmented into sections and it might even have extra bits for b-roll, etc. Once that is done, it will also distill that into an even smaller script that will be a blog and it gets added to my site automatically. I will still have to manually record and edit my videos for YouTube, cant automate that yet 🤣</p>
+<h2 id="moral-of-the-story">Moral of the story</h2>
+<p>I don&rsquo;t think any of this would happen if it wasn&rsquo;t for vibecoding, like being able to open an AI agent and just giving it some instructions and it just giving you what you wanted. I feel like it&rsquo;s really useful for a lot of people who have no technical knowledge for something like this but want something similar to it.</p>
+<p>If you want to do something rn, and you feel like its too complecated for you figure it out <strong>now</strong>, use an AI agent, and go crazy. vibe code away. ofcourse vibecode resposibly. vibe coding without any idea about the code in production code in a company could definitely get you into trouble, but for simple personal stuff, the free models in OpenCode or a sub like OpenCode Go or even a small top up on DeepSeek&rsquo;s API is enough to make a lot of cool shit happen. Go and enjoy freedom of having what you wanted without the time wasters that come with it.</p>
+
+  </div>
+</article>
+
+  </main>
+
+  <footer class="wrap footer">
+    <p>Source <a href="https://github.com/get-monochromed/get-monochromed.github.io"><strong>code</strong></a> under <strong>AGPL3+</strong> · content under <strong>CC BY-SA 4.0</strong></p>
+  </footer>
+</body>
+</html>
