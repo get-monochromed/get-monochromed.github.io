@@ -24,9 +24,23 @@
      home page all use it, so the left and right margins are always equal — a
      narrower element inside a wider container was what made the blog page look
      off-centre (body text 44rem left-aligned in an 860px column left 156px of
-     dead space on one side only). Tune this single number to change the column
-     and the line length together; they cannot drift apart. */
-  --measure:44rem;
+     dead space on one side only). Every page type reads this one number, so the
+     column and the line length cannot drift apart.
+
+     FLUID ON BIG DISPLAYS: it is a fixed 44rem on phones and laptops, then it
+     grows with the window and stops at 60rem. At 1500px the formula lands on
+     exactly 44rem, so nothing narrower than that sees any change at all; from
+     there it adds ~0.32px of column per px of window and hits the ceiling at
+     ~2300px. That is what a 27" 1440p (2560px) or a 4K screen needs — the old
+     fixed column left ~900px of dead air either side of it.
+       --measure-min  the column on every screen up to ~1500px wide
+       --measure-max  the ceiling on very wide displays
+       32vw + 14rem   the growth in between (52rem at 1920px, 60rem at 2300px)
+     Lower --measure-max to 56rem for a more conservative ceiling; raise it to
+     64rem if you want the 4K column to keep filling out. */
+  --measure-min:44rem;
+  --measure-max:60rem;
+  --measure:clamp(var(--measure-min),32vw + 14rem,var(--measure-max));
   /* Body-text heading scale. The post title deliberately sits a step above
      --h-sec, so a section heading never competes with the page title.
      Tune these two numbers to taste; they apply to every post at once. */

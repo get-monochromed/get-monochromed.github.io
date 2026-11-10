@@ -16,7 +16,7 @@
 {{- $full := $img.Resize (printf "%dx webp q85" $w) -}}
 <img src="{{ $lg.RelPermalink }}"
      srcset="{{ $sm.RelPermalink }} 760w, {{ $lg.RelPermalink }} 1400w"
-     sizes="(max-width: 900px) 100vw, 860px"
+     sizes="(max-width: 1500px) 44rem, 60rem"
      width="{{ $lg.Width }}" height="{{ $lg.Height }}"
      data-full="{{ $full.RelPermalink }}" data-full-w="{{ $full.Width }}" data-full-h="{{ $full.Height }}"
      loading="lazy" decoding="async" alt="{{ .Text }}">
