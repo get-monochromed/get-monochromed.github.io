@@ -16,10 +16,10 @@
 {{- $full := $img.Resize (printf "%dx webp q85" $w) -}}
 <img src="{{ $lg.RelPermalink }}"
      srcset="{{ $sm.RelPermalink }} 760w, {{ $lg.RelPermalink }} 1400w"
-     sizes="(max-width: 1500px) 44rem, 60rem"
+     sizes="(max-width: 744px) calc(100vw - 2.5rem), (max-width: 1500px) 44rem, (max-width: 2300px) calc(32vw + 14rem), 60rem"
      width="{{ $lg.Width }}" height="{{ $lg.Height }}"
      data-full="{{ $full.RelPermalink }}" data-full-w="{{ $full.Width }}" data-full-h="{{ $full.Height }}"
-     loading="lazy" decoding="async" alt="{{ .Text }}">
+     loading="lazy" decoding="async" alt="{{ .Text }}" tabindex="0" role="button" aria-label="Open image: {{ .Text }}">
 {{- else -}}
 {{- /* Never upscale. Most screenshots are narrower than 1400px, and resizing
        those up would blur them and inflate the file for no gain. This copy is
@@ -29,7 +29,7 @@
 <img src="{{ $one.RelPermalink }}"
      width="{{ $one.Width }}" height="{{ $one.Height }}"
      data-full="{{ $one.RelPermalink }}" data-full-w="{{ $one.Width }}" data-full-h="{{ $one.Height }}"
-     loading="lazy" decoding="async" alt="{{ .Text }}">
+     loading="lazy" decoding="async" alt="{{ .Text }}" tabindex="0" role="button" aria-label="Open image: {{ .Text }}">
 {{- end -}}
 {{- else -}}
 {{- warnf "render-image: no file at assets/images/%s (referenced from %s) — the <img> below will 404" $name .Page.File.Path -}}

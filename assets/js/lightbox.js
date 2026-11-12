@@ -60,6 +60,7 @@
   let pan = null;                // {x,y,tx,ty,moved,type} for the press in flight
   let lastTap = 0;
   let hintTimer = 0;
+  let opener = null;
 
   const half = () => ({ x: innerWidth / 2, y: innerHeight / 2 });
 
@@ -126,6 +127,7 @@
 
   /* ------------------------------------------------------------------ opening */
   function open(src, alt, w, h) {
+    opener = document.activeElement;
     nw = w;
     nh = h;
     img.style.width = nw + "px";
@@ -171,6 +173,8 @@
     document.documentElement.classList.remove("lb-open");
     clearTimeout(hintTimer);
     hint.classList.remove("is-visible");
+    if (opener && opener.isConnected) opener.focus({ preventScroll: true });
+    opener = null;
   }
 
   /* ------------------------------------------------------------------ triggers */
@@ -183,7 +187,18 @@
   });
 
   document.addEventListener("keydown", (e) => {
-    if (isOpen && e.key === "Escape") {
+    if (!isOpen && (e.key === "Enter" || e.key === " ")) {
+      const thumb = e.target.closest(".prose img[data-full]");
+      if (thumb) {
+        e.preventDefault();
+        open(thumb.dataset.full, thumb.alt || "", +thumb.dataset.fullW, +thumb.dataset.fullH);
+      }
+      return;
+    }
+    if (isOpen && e.key === "Tab") {
+      e.preventDefault();
+      closeBtn.focus();
+    } else if (isOpen && e.key === "Escape") {
       e.preventDefault();
       close();
     }

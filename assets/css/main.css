@@ -71,68 +71,43 @@ body{
 }
 @media (prefers-color-scheme:dark){body{background:#08080a}}
 
-/* ---- frosted background ------------------------------------
-   PERF: the blobs no longer animate scale(). Scaling a filtered
-   layer forces the 48px blur to be re-rasterised every frame; a
-   pure translate stays on the compositor. Drop `translate(5vmax,-4vmax)`
-   scale back into @keyframes below if you miss the breathing.
-   PERF: saturate(1.4) removed — these gradients are neutral greys,
-   so it was a second filter pass for no visible change.
-   PERF: blur 70px -> 48px. Filter cost grows faster than linearly
-   with radius; 48px still reads as fully frosted.
-   Blur radius knob: that 48px. */
-.bg{position:fixed;inset:0;z-index:-1;overflow:hidden}
-.blob{
-  position:absolute;width:60vmax;height:60vmax;border-radius:50%;
-  filter:blur(48px);
-  opacity:1;
-  animation:drift 26s ease-in-out infinite alternate;
-  will-change:transform;
-}
-.b1{background:radial-gradient(circle,#ffffff 0%,#cfcfcf 55%,transparent 72%);top:-18vmax;left:-12vmax}
-.b2{background:radial-gradient(circle,#e6e6e6 0%,#c6c6c6 55%,transparent 72%);bottom:-22vmax;right:-14vmax;animation-delay:-9s;opacity:.8}
-.b3{background:radial-gradient(circle,#f4f4f4 0%,#c2c2c2 52%,transparent 70%);top:28vh;left:32vw;width:44vmax;height:44vmax;animation-delay:-16s;opacity:.8}
-.b4{background:radial-gradient(circle,rgba(255,255,255,.9) 0%,rgba(120,120,120,.5) 50%,transparent 70%);top:60vh;left:-10vw;width:36vmax;height:36vmax;animation-delay:-5s}
+/* A still, layered gradient suggests frosted glass without animated filters or
+   continuously compositing large blurred layers. Theme colours stay neutral so
+   text remains readable across the whole page. */
+.bg{position:fixed;inset:0;z-index:-1;background:
+  radial-gradient(ellipse 75% 65% at 8% 0%,#f7f7f7 0%,transparent 100%),
+  radial-gradient(ellipse 70% 75% at 90% 90%,#c4c4c4 0%,transparent 100%),
+  linear-gradient(135deg,#e2e2e2,#d0d0d0)}
 @media (prefers-color-scheme:dark){
-  .b1{background:radial-gradient(circle,#4a4a4a 0%,#131313 58%,transparent 72%)}
-  .b2{background:radial-gradient(circle,#5c5c5c 0%,#000 60%,transparent 72%)}
-  .b3{background:radial-gradient(circle,#2e2e2e 0%,#0c0c0c 55%,transparent 70%)}
-  .b4{background:radial-gradient(circle,rgba(120,120,120,.5) 0%,rgba(20,20,20,.4) 50%,transparent 70%)}
+  .bg{background:
+    radial-gradient(ellipse 75% 65% at 8% 0%,#383838 0%,transparent 100%),
+    radial-gradient(ellipse 70% 75% at 90% 90%,#202020 0%,transparent 100%),
+    linear-gradient(135deg,#19191b,#08080a)}
 }
-@keyframes drift{from{transform:translate(0,0)}to{transform:translate(5vmax,-4vmax)}}
 
-/* PERF: no mix-blend-mode. `overlay` made the grain re-blend against
-   the whole moving background every frame — that was the thing keeping
-   the GPU busy permanently. The noise is desaturated inside the SVG
-   instead (feColorMatrix), so ordinary alpha compositing gives the same
-   mottled texture with no per-frame blending at all.
-   PERF/visibility knob: `opacity` on .grain. */
-.grain{position:absolute;inset:0;opacity:.5;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.28'/%3E%3C/svg%3E");}
-.vignette{position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 10%,transparent 55%,rgba(0,0,0,.14) 100%)}
-@media (prefers-color-scheme:dark){.vignette{background:radial-gradient(120% 90% at 50% 10%,transparent 50%,rgba(0,0,0,.5) 100%)}}
+/* A small static tile adds grain without a live noise filter. */
+.bg::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:url("/images/frost-grain.png");background-size:140.8px 140.8px;opacity:.064}
+@media (prefers-color-scheme:dark){.bg::after{opacity:.048}}
 
 /* One column, always centred, with equal margins either side. `100% - 2.5rem`
    is what a phone gets, so the measure only ever decides the desktop width. */
 .wrap{width:min(var(--measure),calc(100% - 2.5rem));margin:0 auto}
 
-/* ---- dock: the only pill. ----------------------------------
-   PERF: backdrop blur 32px -> 24px, saturate 200% -> 180%. The
-   frost-over-images effect you like is intact; radius is where the
-   cost lives and 24px is near-identical behind a bar this small. */
+/* ---- dock: a small frosted glass surface ---- */
 .dock-wrap{position:sticky;top:14px;z-index:20;display:flex;justify-content:center;padding:6px;
   transition:transform .3s ease,opacity .3s ease}
 .dock-wrap.hide{transform:translateY(-140%);opacity:0}
 .dock{
   position:relative;display:flex;gap:2px;align-items:center;padding:6px;border-radius:999px;
-  background:rgba(250,250,250,.55);
-  backdrop-filter:blur(24px) saturate(180%);
-  -webkit-backdrop-filter:blur(24px) saturate(180%);
+  background:rgba(245,245,245,.72);
+  -webkit-backdrop-filter:blur(12px);
+  backdrop-filter:blur(12px);
   border:1px solid rgba(255,255,255,.7);
   box-shadow:0 16px 50px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.8),inset 0 -1px 0 rgba(0,0,0,.06);
 }
 @media (prefers-color-scheme:dark){
-  .dock{background:rgba(18,18,20,.55);border-color:rgba(255,255,255,.14);
+  .dock{background:rgba(25,25,27,.72);border-color:rgba(255,255,255,.14);
     box-shadow:0 16px 50px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.14)}
 }
 .dock::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
@@ -263,7 +238,6 @@ body{
   .dock a{padding:.5rem .55rem;font-size:.74rem}
 }
 @media (prefers-reduced-motion:reduce){
-  .blob{animation:none;will-change:auto}
   .dock-wrap,.slider,.rows li a{transition:none}
 }
 
@@ -281,9 +255,7 @@ body{
 html.lb-open{overflow:hidden}
 
 .lb{position:fixed;inset:0;z-index:60;overflow:hidden;
-  background:rgba(8,8,10,.86);
-  -webkit-backdrop-filter:blur(22px) saturate(1.25);
-  backdrop-filter:blur(22px) saturate(1.25);
+  background:rgba(8,8,10,.96);
   /* Our own pinch, no browser page-zoom, no scroll chaining. */
   touch-action:none;overscroll-behavior:contain}
 .lb[hidden]{display:none}
@@ -319,8 +291,7 @@ html.lb-open{overflow:hidden}
   width:44px;height:44px;display:grid;place-items:center;padding:0;
   font:inherit;font-size:22px;line-height:1;color:#fafafa;cursor:pointer;
   border-radius:50%;border:1px solid rgba(255,255,255,.18);
-  background:rgba(255,255,255,.09);
-  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+  background:#242426}
 .lb-close:hover{background:rgba(255,255,255,.18)}
 .lb-close:focus-visible{outline:2px solid rgba(255,255,255,.7);outline-offset:2px}
 

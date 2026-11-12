@@ -106,6 +106,7 @@
     // Keyboard focus has no "passing through", so it commits at once.
     a.addEventListener("focus", () => {
       clearTimeout(intentTimer);
+      wrap.classList.remove("hide");
       place(a);
     });
     // Touch, which has no hover at all. The pill moves on finger-down — the only
@@ -154,7 +155,9 @@
   // parked on it — so that one still navigates at once.
   dock.addEventListener("click", (e) => {
     const a = e.target.closest("[data-dock]");
-    if (!a || a === top || a === active || TOUCH_NAV_DELAY === 0) return;
+    if (!a || a === top || a === active || TOUCH_NAV_DELAY === 0 ||
+        e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey ||
+        a.hasAttribute("download") || (a.target && a.target !== "_self")) return;
     if (!fingerTap && !matchMedia("(hover: none)").matches) return;
     e.preventDefault();
     fingerTap = false;
